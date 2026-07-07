@@ -1,21 +1,30 @@
 {
-  "nome":"Mario Collection",
-
-  "cor":"#d32f2f",
-
-  "imagem":"mario-banner.jpg",
-
-  "jogos":[
-
-    "Super Mario World",
-
-    "Mario Kart",
-
-    "Mario RPG",
-
-    "Mario All Stars",
-
-    "Yoshi's Island"
-
+  "codigo": "RP-0001",
+  "nome": "Mario Collection",
+  "cor": "#d32f2f",
+  "banner": "images/mario/banner.jpg",
+  "card": "images/mario/card.jpg",
+  "descricao": "Os maiores clássicos do Mario em um único cartucho.",
+  "jogos": [
+    {
+      "nome": "Super Mario World",
+      "arquivo": "super-mario-world.sfc"
+    },
+    {
+      "nome": "Mario Kart",
+      "arquivo": "mario-kart.sfc"
+    },
+    {
+      "nome": "Mario RPG",
+      "arquivo": "mario-rpg.sfc"
+    },
+    {
+      "nome": "Mario All-Stars",
+      "arquivo": "mario-all-stars.sfc"
+    },
+    {
+      "nome": "Yoshi's Island",
+      "arquivo": "yoshi-island.sfc"
+    }
   ]
 }
