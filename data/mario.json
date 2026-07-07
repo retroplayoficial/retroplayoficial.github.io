@@ -1,0 +1,21 @@
+{
+  "nome":"Mario Collection",
+
+  "cor":"#d32f2f",
+
+  "imagem":"mario-banner.jpg",
+
+  "jogos":[
+
+    "Super Mario World",
+
+    "Mario Kart",
+
+    "Mario RPG",
+
+    "Mario All Stars",
+
+    "Yoshi's Island"
+
+  ]
+}
