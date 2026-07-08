@@ -32,7 +32,8 @@ lista += `
 
 </div>
 
-<a class="botaoJogar" href="#">
+<a class="botaoJogar"
+href="../emulator/?console=${consoleSelecionado}&rom=${jogo.arquivo}">
 
 ▶ Jogar
 
