@@ -1,10 +1,8 @@
 {
   "codigo": "RP-0001",
   "nome": "Mario Collection",
-  "cor": "#d32f2f",
-  "banner": "images/mario/banner.jpg",
-  "card": "images/mario/card.jpg",
-  "descricao": "Os maiores clássicos do Mario em um único cartucho.",
+  "descricao": "Os maiores clássicos do Mario.",
+
   "jogos": [
     {
       "nome": "Super Mario World",
