@@ -279,3 +279,52 @@ transition:.3s;
 background:white;
 
 }
+.topo{
+
+text-align:center;
+
+margin-bottom:25px;
+
+}
+
+.bannerColecao{
+
+background:#202020;
+
+padding:25px;
+
+border-radius:18px;
+
+margin-bottom:30px;
+
+box-shadow:0 0 20px rgba(0,0,0,.35);
+
+}
+
+.bannerColecao h2{
+
+font-size:34px;
+
+margin-bottom:12px;
+
+}
+
+.bannerColecao p{
+
+opacity:.85;
+
+margin-bottom:20px;
+
+}
+
+.informacoes{
+
+display:flex;
+
+justify-content:space-between;
+
+font-weight:bold;
+
+font-size:18px;
+
+}

@@ -1,23 +1,45 @@
-document.getElementById("titulo").innerHTML="Mario Collection";
+function carregarColecao(caminhoJson) {
 
-document.getElementById("descricao").innerHTML="Os maiores clássicos do Mario.";
+    fetch(caminhoJson)
+    .then(response => response.json())
+    .then(dados => {
 
-document.getElementById("imagem").innerHTML="🍄 MARIO";
+        document.getElementById("titulo").innerHTML = dados.nome;
+        document.getElementById("descricao").innerHTML = dados.descricao;
 
-document.getElementById("listaJogos").innerHTML=`
+        let html = "";
 
-<ul>
+        dados.jogos.forEach(jogo => {
 
-<li>Super Mario World</li>
+            html += `
 
-<li>Mario Kart</li>
+            <div class="card">
 
-<li>Mario RPG</li>
+                <h2>${jogo.nome}</h2>
 
-<li>Mario All Stars</li>
+                <p>${dados.console.toUpperCase()}</p>
 
-<li>Yoshi's Island</li>
+                <a class="botao" href="../emulator/index.html?console=${dados.console}&colecao=${dados.colecao}&rom=${jogo.arquivo}">
+                    ▶ Jogar
+                </a>
 
-</ul>
+            </div>
 
-`;
+            `;
+
+        });
+
+        document.getElementById("listaJogos").innerHTML = html;
+
+    })
+
+    .catch(error => {
+
+        document.getElementById("listaJogos").innerHTML =
+        "<h2>Erro ao carregar a coleção.</h2>";
+
+        console.log(error);
+
+    });
+
+}

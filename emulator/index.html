@@ -1,48 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 
 <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>RetroPlay</title>
+<title>RetroPlay Emulator</title>
 
-<link rel="stylesheet" href="../css/style.css">
+<style>
+
+html,body{
+
+margin:0;
+padding:0;
+background:#000;
+height:100%;
+
+}
+
+#game{
+
+width:100vw;
+height:100vh;
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-<div class="container">
+<div id="game"></div>
 
-<header>
 
-<h1>🎮 RetroPlay</h1>
+<script>
 
-<p>Inserindo cartucho...</p>
+const params = new URLSearchParams(window.location.search);
 
-</header>
 
-<div class="card">
+const consoleSelecionado = params.get("console");
+const colecao = params.get("colecao");
+const rom = params.get("rom");
 
-<h2 id="nomeJogo">
-Carregando...
-</h2>
 
-<p id="console"></p>
+console.log("Console:", consoleSelecionado);
+console.log("Coleção:", colecao);
+console.log("ROM:", rom);
 
-<div id="barra">
 
-████████░░░░░░░░
+// Configuração EmulatorJS
 
-</div>
+EJS_player = "#game";
 
-</div>
 
-</div>
+EJS_core = consoleSelecionado;
 
-<script src="loader.js"></script>
+
+EJS_gameName = rom;
+
+
+EJS_gameUrl = 
+`../roms/${consoleSelecionado}/${colecao}/${encodeURIComponent(rom)}`;
+
+
+EJS_pathtodata = 
+"https://cdn.emulatorjs.org/stable/data/";
+
+
+EJS_startOnLoaded = true;
+
+
+EJS_fullscreenOnLoaded = true;
+
+
+</script>
+
+
+<script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+
 
 </body>
 

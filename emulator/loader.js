@@ -3,22 +3,23 @@ const params = new URLSearchParams(window.location.search);
 const consoleSelecionado = params.get("console");
 const rom = params.get("rom");
 
-const caminhoRom = `../roms/${consoleSelecionado}/${rom}`;
-
 document.getElementById("console").innerHTML =
-"Console: " + consoleSelecionado;
+"Console: " + consoleSelecionado.toUpperCase();
 
 document.getElementById("nomeJogo").innerHTML =
 rom;
 
-document.getElementById("barra").innerHTML =
-"Preparando emulador...";
+document.getElementById("status").innerHTML =
+"Localizando ROM...";
+
+const caminhoRom =
+`../roms/${consoleSelecionado}/${rom}`;
 
 console.log("ROM:", caminhoRom);
 
 setTimeout(() => {
 
-document.getElementById("barra").innerHTML =
-"Pronto para iniciar.";
+document.getElementById("status").innerHTML =
+"Emulador pronto.";
 
 },1500);

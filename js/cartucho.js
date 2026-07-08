@@ -54,3 +54,11 @@ document.getElementById("listaJogos").innerHTML =
 "Erro ao carregar coleção.";
 
 });
+document.getElementById("descricao").innerHTML =
+dados.descricao;
+
+document.getElementById("console").innerHTML =
+"🎮 " + dados.console.toUpperCase();
+
+document.getElementById("quantidade").innerHTML =
+dados.jogos.length + " Jogos";
