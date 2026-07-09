@@ -45,6 +45,25 @@ const consoleSelecionado = params.get("console");
 const colecao = params.get("colecao");
 const rom = params.get("rom");
 
+if (!consoleSelecionado || !colecao || !rom) {
+
+    document.body.innerHTML = `
+    <div style="
+    background:#000;
+    color:white;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial;
+    font-size:25px;">
+    Nenhum jogo foi informado.
+    </div>
+    `;
+
+    throw new Error("Parâmetros ausentes.");
+
+}
 
 console.log("Console:", consoleSelecionado);
 console.log("Coleção:", colecao);
@@ -59,7 +78,7 @@ EJS_player = "#game";
 EJS_core = consoleSelecionado;
 
 
-EJS_gameName = rom;
+EJS_gameName = rom.replace(/\.[^/.]+$/, "");
 
 
 EJS_gameUrl = 

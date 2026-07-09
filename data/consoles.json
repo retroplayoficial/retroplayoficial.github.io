@@ -1,0 +1,22 @@
+[
+    {
+        "id": "snes",
+        "nome": "Super Nintendo",
+        "imagem": "images/consoles/snes.jpg"
+    },
+    {
+        "id": "megadrive",
+        "nome": "Mega Drive",
+        "imagem": "images/consoles/megadrive.jpg"
+    },
+    {
+        "id": "n64",
+        "nome": "Nintendo 64",
+        "imagem": "images/consoles/n64.jpg"
+    },
+    {
+        "id": "gba",
+        "nome": "Game Boy Advance",
+        "imagem": "images/consoles/gba.jpg"
+    }
+]

@@ -1,50 +1,50 @@
 {
-  "id": "RP-SNES-001",
+    "id": "RP000001",
 
-  "nome": "Mario Collection",
+    "console": "snes",
 
-  "descricao": "Os maiores clássicos do Mario.",
+    "colecao": "mario",
 
-  "console": "snes",
+    "nome": "Mario Collection",
 
-  "colecao": "mario",
+    "descricao": "Os maiores clássicos do Mario.",
 
-  "capa": "card.jpg",
+    "banner": "banner.jpg",
 
-  "banner": "banner.jpg",
+    "capa": "card.jpg",
 
-  "jogos": [
+    "jogos": [
 
-    {
-      "id":"smw",
-      "nome":"Super Mario World",
-      "arquivo":"super-mario-world.sfc"
-    },
+        {
+            "id":"smw",
+            "nome":"Super Mario World",
+            "arquivo":"super-mario-world.smc"
+        },
 
-    {
-      "id":"mk",
-      "nome":"Mario Kart",
-      "arquivo":"mario-kart.sfc"
-    },
+        {
+            "id":"mk",
+            "nome":"Mario Kart",
+            "arquivo":"mario-kart.smc"
+        },
 
-    {
-      "id":"mrpg",
-      "nome":"Mario RPG",
-      "arquivo":"mario-rpg.sfc"
-    },
+        {
+            "id":"mrpg",
+            "nome":"Mario RPG",
+            "arquivo":"mario-rpg.smc"
+        },
 
-    {
-      "id":"mas",
-      "nome":"Mario All-Stars",
-      "arquivo":"mario-all-stars.sfc"
-    },
+        {
+            "id":"mas",
+            "nome":"Mario All-Stars",
+            "arquivo":"mario-all-stars.smc"
+        },
 
-    {
-      "id":"yi",
-      "nome":"Yoshi's Island",
-      "arquivo":"yoshi-island.sfc"
-    }
+        {
+            "id":"yi",
+            "nome":"Yoshi's Island",
+            "arquivo":"yoshi-island.smc"
+        }
 
-  ]
+    ]
 
 }
