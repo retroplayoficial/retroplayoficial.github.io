@@ -28,7 +28,7 @@ async function carregarConsole() {
 
             <div class="imagem">
 
-                <img src="images/${franquia.colecao}/card.jpg">
+                <img src="${franquia.imagem}" alt="${franquia.nome}">
 
             </div>
 
