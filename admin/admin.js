@@ -1,193 +1,64 @@
 window.onload = function () {
-
     gerarID();
     adicionarJogo();
-
 };
 
 // ======================
 // GERAR ID AUTOMÁTICO
 // ======================
 
-async function carregarDashboard(){
-
-const consoles=[
-
-"snes",
-
-"megadrive",
-
-"gba",
-
-"n64"
-
-];
-
-let franquias=0;
-
-let jogos=0;
-
-for(const consoleNome of consoles){
-
-try{
-
-const resposta=
-
-await fetch(`../data/${consoleNome}/index.json`);
-
-const lista=
-
-await resposta.json();
-
-franquias+=lista.length;
-
-for(const arquivo of lista){
-
-try{
-
-const json=
-
-await fetch(`../data/${consoleNome}/${arquivo}`);
-
-const dados=
-
-await json.json();
-
-jogos+=dados.jogos.length;
-
-}
-
-catch{}
-
-}
-
-}
-
-catch{}
-
-}
-
-document.getElementById("totalFranquias").innerHTML=
-
-franquias;
-
-document.getElementById("totalJogos").innerHTML=
-
-jogos;
-
-let ultimaColecao = "-";
-let ultimoID = "-";
-
-}async function carregarDashboard(){
-
-const consoles=[
-
-"snes",
-
-"megadrive",
-
-"gba",
-
-"n64"
-
-];
-
-let franquias=0;
-
-let jogos=0;
-
-for(const consoleNome of consoles){
-
-try{
-
-const resposta=
-
-await fetch(`../data/${consoleNome}/index.json`);
-
-const lista=
-
-await resposta.json();
-
-franquias+=lista.length;
-
-for(const arquivo of lista){
-
-try{
-
-const json=
-
-await fetch(`../data/${consoleNome}/${arquivo}`);
-
-const dados=
-
-await json.json();
-
-jogos+=dados.jogos.length;
-
-}
-
-catch{}
-
-}
-
-}
-
-catch{}
-
-}
-
-document.getElementById("totalFranquias").innerHTML=
-
-franquias;
-
-document.getElementById("totalJogos").innerHTML=
-
-jogos;
-
+async function carregarDashboard() {
+    const consoles = ["snes", "megadrive", "gba", "n64"];
+    let franquias = 0;
+    let jogos = 0;
+
+    for (const consoleNome of consoles) {
+        try {
+            const resposta = await fetch(`../data/${consoleNome}/index.json`);
+            const lista = await resposta.json();
+            franquias += lista.length;
+
+            for (const arquivo of lista) {
+                try {
+                    const json = await fetch(`../data/${consoleNome}/${arquivo}`);
+                    const dados = await json.json();
+                    jogos += dados.jogos.length;
+                } catch {}
+            }
+        } catch {}
+    }
+
+    document.getElementById("totalFranquias").innerHTML = franquias;
+    document.getElementById("totalJogos").innerHTML = jogos;
 }
 
 async function gerarID() {
-
     const consoleSelecionado = document.getElementById("console").value;
-
     let prefixo = "";
 
     switch (consoleSelecionado) {
-
         case "snes":
             prefixo = "RPSNES";
             break;
-
         case "megadrive":
             prefixo = "RPMD";
             break;
-
         case "n64":
             prefixo = "RPN64";
             break;
-
         case "gba":
             prefixo = "RPGBA";
             break;
-
     }
 
     try {
-
         const resposta = await fetch(`../data/${consoleSelecionado}/index.json`);
-
         const lista = await resposta.json();
-
         const numero = String(lista.length + 1).padStart(4, "0");
-
         document.getElementById("id").value = prefixo + numero;
-
     } catch {
-
         document.getElementById("id").value = prefixo + "0001";
-
     }
-
 }
 
 // ======================
@@ -195,7 +66,6 @@ async function gerarID() {
 // ======================
 
 function atualizarColecao() {
-
     const nome = document.getElementById("nome").value;
 
     let slug = nome
@@ -210,7 +80,6 @@ function atualizarColecao() {
         .replace(/\s+/g, "-");
 
     document.getElementById("colecao").value = slug;
-
 }
 
 // ======================
@@ -220,38 +89,18 @@ function atualizarColecao() {
 let contador = 0;
 
 function adicionarJogo() {
-
     contador++;
 
     const html = `
+        <div class="jogo">
+            <h3>Jogo ${contador}</h3>
+            <input type="text" placeholder="Nome do jogo" class="nomeJogo">
+            <input type="text" placeholder="Ano" class="anoJogo">
+            <input type="text" placeholder="Arquivo da ROM" class="arquivoJogo">
+        </div>
+    `;
 
-<div class="jogo">
-
-<h3>Jogo ${contador}</h3>
-
-<input
-type="text"
-placeholder="Nome do jogo"
-class="nomeJogo">
-
-<input
-type="text"
-placeholder="Ano"
-class="anoJogo">
-
-<input
-type="text"
-placeholder="Arquivo da ROM"
-class="arquivoJogo">
-
-</div>
-
-`;
-
-    document
-        .getElementById("listaJogos")
-        .insertAdjacentHTML("beforeend", html);
-
+    document.getElementById("listaJogos").insertAdjacentHTML("beforeend", html);
 }
 
 // ======================
@@ -259,60 +108,36 @@ class="arquivoJogo">
 // ======================
 
 function gerarJSON() {
-
     const consoleSelecionado = document.getElementById("console").value;
-
     const colecao = document.getElementById("colecao").value;
-
     const caminhoBase = `${consoleSelecionado}/${colecao}`;
 
     const dados = {
-
         id: document.getElementById("id").value,
-
         console: consoleSelecionado,
-
         colecao: colecao,
-
         imagem: `images/${caminhoBase}/card.jpg`,
-
         banner: `images/${caminhoBase}/banner.jpg`,
-
         nome: document.getElementById("nome").value,
-
         descricao: document.getElementById("descricao").value,
-
         cor: document.getElementById("cor").value,
-
         jogos: []
-
     };
 
     const nomes = document.querySelectorAll(".nomeJogo");
-
     const anos = document.querySelectorAll(".anoJogo");
-
     const arquivos = document.querySelectorAll(".arquivoJogo");
 
     for (let i = 0; i < nomes.length; i++) {
-
         dados.jogos.push({
-
             id: "jogo" + (i + 1),
-
             nome: nomes[i].value,
-
             ano: anos[i].value,
-
             arquivo: arquivos[i].value
-
         });
-
     }
 
-    document.getElementById("saidaJson").value =
-        JSON.stringify(dados, null, 4);
-
+    document.getElementById("saidaJson").value = JSON.stringify(dados, null, 4);
 }
 
 // ======================
@@ -320,28 +145,17 @@ function gerarJSON() {
 // ======================
 
 function baixarJSON() {
-
     gerarJSON();
 
     const json = document.getElementById("saidaJson").value;
-
-    const nomeArquivo =
-        document.getElementById("colecao").value + ".json";
-
-    const blob = new Blob([json], {
-        type: "application/json"
-    });
-
+    const nomeArquivo = document.getElementById("colecao").value + ".json";
+    const blob = new Blob([json], { type: "application/json" });
     const link = document.createElement("a");
 
     link.href = URL.createObjectURL(blob);
-
     link.download = nomeArquivo;
-
     link.click();
-
     URL.revokeObjectURL(link.href);
-
 }
 
 // ======================
@@ -349,22 +163,13 @@ function baixarJSON() {
 // ======================
 
 function mostrarAba(nome) {
-
-    const abas = [
-        "franquia",
-        "jogos",
-        "imagens",
-        "exportar"
-    ];
+    const abas = ["franquia", "jogos", "imagens", "exportar"];
 
     abas.forEach(id => {
-
         document.getElementById(id).style.display = "none";
-
     });
 
     document.getElementById(nome).style.display = "block";
-
 }
 
 // ======================
@@ -372,297 +177,173 @@ function mostrarAba(nome) {
 // ======================
 
 function previewImagem(input, id) {
-
     if (!input.files.length) return;
 
     const reader = new FileReader();
-
     reader.onload = function (e) {
-
         const img = document.getElementById(id);
-
         img.src = e.target.result;
-
         img.style.display = "block";
-
     };
-
     reader.readAsDataURL(input.files[0]);
-
 }
 
-function baixarIndex(){
+function baixarIndex() {
+    const colecao = document.getElementById("colecao").value;
+    const lista = [`${colecao}.json`];
 
-    const colecao =
-    document.getElementById("colecao").value;
-
-    const lista=[
-
-        `${colecao}.json`
-
-    ];
-
-    const blob=new Blob(
-
-        [JSON.stringify(lista,null,4)],
-
-        {type:"application/json"}
-
+    const blob = new Blob(
+        [JSON.stringify(lista, null, 4)],
+        { type: "application/json" }
     );
 
-    const link=document.createElement("a");
-
-    link.href=URL.createObjectURL(blob);
-
-    link.download="index.json";
-
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "index.json";
     link.click();
-
     URL.revokeObjectURL(link.href);
-
 }
 
+// ======================
+// CARREGAR BIBLIOTECA
+// ======================
+
 async function carregarBiblioteca() {
-
-    const consoles = [
-        "snes",
-        "megadrive",
-        "n64",
-        "gba"
-    ];
-
+    const consoles = ["snes", "megadrive", "n64", "gba"];
     let html = '<div class="biblioteca-grid">';
 
     for (const consoleNome of consoles) {
-
         try {
-
-            const resposta =
-                await fetch(`../data/${consoleNome}/index.json`);
-
-            const lista =
-                await resposta.json();
+            const resposta = await fetch(`../data/${consoleNome}/index.json`);
+            const lista = await resposta.json();
 
             for (const arquivo of lista) {
+                const json = await fetch(`../data/${consoleNome}/${arquivo}`);
+                const dados = await json.json();
 
-                const json =
-                    await fetch(`../data/${consoleNome}/${arquivo}`);
-
-                const dados =
-                    await json.json();
-
+                // Adicionado data-console="${dados.console}" para corrigir o filtro
                 html += `
-
-<div class="card-franquia">
-
-<img src="../${dados.imagem}" alt="${dados.nome}">
-
-<div class="card-body">
-
-<h3>${dados.nome}</h3>
-
-<p><strong>Console:</strong> ${dados.console.toUpperCase()}</p>
-
-<p><strong>Jogos:</strong> ${dados.jogos.length}</p>
-
-<p><strong>ID:</strong> ${dados.id}</p>
-
-<div class="botoes">
-
-<a href="../pages/${dados.colecao}.html">
-
-▶ Abrir
-
-</a>
-
-<a href="editar.html?id=${dados.id}">
-
-✏ Editar
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-`;
-
+                    <div class="card-franquia" data-console="${dados.console}">
+                        <img src="../${dados.imagem}" alt="${dados.nome}">
+                        <div class="card-body">
+                            <h3>${dados.nome}</h3>
+                            <p><strong>Console:</strong> ${dados.console.toUpperCase()}</p>
+                            <p><strong>Jogos:</strong> ${dados.jogos.length}</p>
+                            <p><strong>ID:</strong> ${dados.id}</p>
+                            <div class="botoes">
+                                <a href="../pages/${dados.colecao}.html">▶ Abrir</a>
+                                <a href="editar.html?id=${dados.id}">✏ Editar</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
             }
-
         } catch (erro) {
-
             console.log(erro);
-
         }
-
     }
 
     html += "</div>";
 
+    // Insere o HTML primeiro, depois faz a contagem correta
     document.getElementById("listaFranquias").innerHTML = html;
-
+    document.getElementById("totalBiblioteca").innerHTML = document.querySelectorAll(".card-franquia").length;
 }
 
 function criarMenu() {
-
     return `
-
-<aside class="sidebar">
-
-    <h2>🎮 RetroPlay</h2>
-
-    <nav>
-
-        <a href="dashboard.html">🏠 Dashboard</a>
-
-        <a href="biblioteca.html">📚 Biblioteca</a>
-
-        <a href="index.html">➕ Nova Franquia</a>
-
-        <a href="editar.html">✏ Editar</a>
-
-    </nav>
-
-</aside>
-
-`;
-
+        <aside class="sidebar">
+            <h2>🎮 RetroPlay</h2>
+            <nav>
+                <a href="dashboard.html">🏠 Dashboard</a>
+                <a href="biblioteca.html">📚 Biblioteca</a>
+                <a href="index.html">➕ Nova Franquia</a>
+                <a href="editar.html">✏ Editar</a>
+            </nav>
+        </aside>
+    `;
 }
 
 async function carregarEditor() {
-
     const params = new URLSearchParams(window.location.search);
-
     const id = params.get("id");
 
     if (!id) {
-
-        document.getElementById("conteudo").innerHTML =
-        "<h2>Nenhuma franquia selecionada.</h2>";
-
+        document.getElementById("conteudo").innerHTML = "<h2>Nenhuma franquia selecionada.</h2>";
         return;
-
     }
 
-    const consoles = [
-
-        "snes",
-        "megadrive",
-        "n64",
-        "gba"
-
-    ];
+    const consoles = ["snes", "megadrive", "n64", "gba"];
 
     for (const consoleNome of consoles) {
-
         try {
-
-            const resposta =
-            await fetch(`../data/${consoleNome}/index.json`);
-
-            const lista =
-            await resposta.json();
+            const resposta = await fetch(`../data/${consoleNome}/index.json`);
+            const lista = await resposta.json();
 
             for (const arquivo of lista) {
-
-                const json =
-                await fetch(`../data/${consoleNome}/${arquivo}`);
-
-                const dados =
-                await json.json();
+                const json = await fetch(`../data/${consoleNome}/${arquivo}`);
+                const dados = await json.json();
 
                 if (dados.id == id) {
-
                     mostrarEditor(dados);
-
                     return;
-
                 }
-
             }
-
-        }
-
-        catch {}
-
+        } catch {}
     }
-
 }
 
-function mostrarEditor(dados){
+function mostrarEditor(dados) {
+    let html = `
+        <h2>${dados.nome}</h2>
+        <p><strong>ID:</strong> ${dados.id}</p>
+        <p><strong>Console:</strong> ${dados.console.toUpperCase()}</p>
+        <p><strong>Descrição:</strong></p>
+        <textarea id="novaDescricao" style="width:100%;height:120px;">${dados.descricao}</textarea>
+        <h3>Jogos</h3>
+    `;
 
-let html = `
+    dados.jogos.forEach(jogo => {
+        html += `
+            <div class="card">
+                <b>${jogo.nome}</b><br>
+                ROM: ${jogo.arquivo}
+            </div>
+        `;
+    });
 
-<h2>${dados.nome}</h2>
+    html += `
+        <br>
+        <button>💾 Salvar</button>
+    `;
 
-<p>
+    document.getElementById("conteudo").innerHTML = html;
+}
 
-<strong>ID:</strong>
+// ==========================================
+// FILTRO DA BIBLIOTECA
+// ==========================================
 
-${dados.id}
+function filtrarBiblioteca() {
+    const texto = document.getElementById("pesquisa").value.toLowerCase();
+    const consoleSelecionado = document.getElementById("filtroConsole").value;
+    const cards = document.querySelectorAll(".card-franquia");
+    let total = 0;
 
-</p>
+    cards.forEach(card => {
+        const nome = card.querySelector("h3").innerText.toLowerCase();
+        const consoleCard = card.dataset.console;
 
-<p>
+        const pesquisaOK = nome.includes(texto);
+        const consoleOK = consoleSelecionado == "" || consoleSelecionado == consoleCard;
 
-<strong>Console:</strong>
+        if (pesquisaOK && consoleOK) {
+            card.style.display = "block";
+            total++;
+        } else {
+            card.style.display = "none";
+        }
+    });
 
-${dados.console.toUpperCase()}
-
-</p>
-
-<p>
-
-<strong>Descrição:</strong>
-
-</p>
-
-<textarea
-id="novaDescricao"
-style="width:100%;height:120px;">
-
-${dados.descricao}
-
-</textarea>
-
-<h3>Jogos</h3>
-
-`;
-
-dados.jogos.forEach(jogo=>{
-
-html += `
-
-<div class="card">
-
-<b>${jogo.nome}</b>
-
-<br>
-
-ROM:
-
-${jogo.arquivo}
-
-</div>
-
-`;
-
-});
-
-html += `
-
-<br>
-
-<button>
-
-💾 Salvar
-
-</button>
-
-`;
-
-document.getElementById("conteudo").innerHTML = html;
-
+    document.getElementById("totalBiblioteca").innerHTML = total;
 }

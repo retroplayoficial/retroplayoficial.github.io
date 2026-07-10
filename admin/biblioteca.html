@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 
 <head>
@@ -7,12 +6,11 @@
 <meta charset="UTF-8">
 
 <meta name="viewport"
-content="width=device-width,initial-scale=1.0">
+content="width=device-width, initial-scale=1.0">
 
 <title>Biblioteca</title>
 
-<link rel="stylesheet"
-href="admin.css">
+<link rel="stylesheet" href="admin.css">
 
 </head>
 
@@ -20,19 +18,55 @@ href="admin.css">
 
 <div class="layout">
 
-<div id="menu"></div>
+    <div id="menu"></div>
 
-<div class="main">
+    <div class="main">
 
-<h1>📚 Biblioteca</h1>
+        <h1>📚 Biblioteca RetroPlay</h1>
 
-<div id="listaFranquias">
+        <div class="card">
 
-Carregando...
+            <h3>Total de Franquias</h3>
 
-</div>
+            <h2 id="totalBiblioteca">0</h2>
 
-</div>
+        </div>
+
+        <div class="card">
+
+            <input
+                type="text"
+                id="pesquisa"
+                placeholder="🔍 Pesquisar franquia..."
+                onkeyup="filtrarBiblioteca()">
+
+            <select
+                id="filtroConsole"
+                onchange="filtrarBiblioteca()">
+
+                <option value="">Todos os Consoles</option>
+
+                <option value="snes">Super Nintendo</option>
+
+                <option value="megadrive">Mega Drive</option>
+
+                <option value="n64">Nintendo 64</option>
+
+                <option value="gba">Game Boy Advance</option>
+
+            </select>
+
+        </div>
+
+        <div
+            id="listaFranquias"
+            class="biblioteca-grid">
+
+            Carregando...
+
+        </div>
+
+    </div>
 
 </div>
 
@@ -40,9 +74,7 @@ Carregando...
 
 <script>
 
-document.getElementById("menu").innerHTML=
-
-criarMenu();
+document.getElementById("menu").innerHTML = criarMenu();
 
 carregarBiblioteca();
 
