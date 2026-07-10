@@ -75,6 +75,9 @@ document.getElementById("totalJogos").innerHTML=
 
 jogos;
 
+let ultimaColecao = "-";
+let ultimoID = "-";
+
 }async function carregarDashboard(){
 
 const consoles=[
