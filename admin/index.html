@@ -1,169 +1,87 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>RetroPlay Builder</title>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>RetroPlay CMS</title>
 
 <link rel="stylesheet" href="admin.css">
-
-<script src="admin.js"></script>
 
 </head>
 
 <body>
 
-<div class="layout">
+<div class="dashboard">
 
-    <aside class="menu">
+<h1>🎮 RetroPlay CMS</h1>
 
-        <h2>🎮 RetroPlay</h2>
+<div class="cards">
 
-        <button onclick="mostrarAba('franquia')">📁 Franquia</button>
+<div class="info">
 
-        <button onclick="mostrarAba('jogos')">🎮 Jogos</button>
+<h2 id="totalFranquias">0</h2>
 
-        <button onclick="mostrarAba('imagens')">🖼️ Imagens</button>
-
-        <button onclick="mostrarAba('exportar')">📦 Exportar</button>
-
-    </aside>
-
-    <main class="conteudo">
-
-        <!-- ABA FRANQUIA -->
-
-        <section id="franquia">
-
-            <h1>Nova Franquia</h1>
-
-            <label>Console</label>
-
-            <select id="console" onchange="gerarID()">
-
-                <option value="snes">Super Nintendo</option>
-                <option value="megadrive">Mega Drive</option>
-                <option value="n64">Nintendo 64</option>
-                <option value="gba">Game Boy Advance</option>
-
-            </select>
-
-            <label>ID</label>
-
-            <input type="text" id="id" readonly>
-
-            <label>Nome</label>
-
-            <input
-type="text"
-id="nome"
-oninput="atualizarColecao()">
-
-            <label>Pasta da Coleção</label>
-
-<input
-type="text"
-id="colecao"
-readonly>
-
-            <label>Descrição</label>
-
-            <textarea id="descricao"></textarea>
-
-            <label>Cor</label>
-
-            <input type="color" id="cor" value="#E60012">
-
-        </section>
-
-        <!-- ABA JOGOS -->
-
-        <section id="jogos" style="display:none;">
-
-            <h1>Jogos</h1>
-
-            <div id="listaJogos"></div>
-
-            <button onclick="adicionarJogo()">
-
-                ➕ Adicionar Jogo
-
-            </button>
-
-        </section>
-
-        <!-- ABA IMAGENS -->
-
-        <section id="imagens" style="display:none;">
-
-<h1>Imagens</h1>
-
-<label>Card da Coleção</label>
-
-<input
-type="file"
-id="cardImagem"
-accept="image/*"
-onchange="previewImagem(this,'previewCard')">
-
-<img
-id="previewCard"
-class="preview">
-
-<br><br>
-
-<label>Banner da Coleção</label>
-
-<input
-type="file"
-id="bannerImagem"
-accept="image/*"
-onchange="previewImagem(this,'previewBanner')">
-
-<img
-id="previewBanner"
-class="preview">
-
-</section>
-
-        <!-- ABA EXPORTAR -->
-
-        <section id="exportar" style="display:none;">
-
-            <h1>Exportar</h1>
-
-            <button onclick="gerarJSON()">
-
-                📄 Gerar JSON
-
-            </button>
-
-            <button onclick="baixarJSON()">
-
-                💾 Baixar JSON
-
-            </button>
-
-            <button
-type="button"
-onclick="baixarIndex()">
-
-📋 Baixar index.json
-
-</button>
-
-            <textarea id="saidaJson" rows="20"></textarea>
-
-        </section>
-
-    </main>
+<p>Franquias</p>
 
 </div>
 
-<script src="builder.js"></script>
+<div class="info">
+
+<h2 id="totalJogos">0</h2>
+
+<p>Jogos</p>
+
+</div>
+
+<div class="info">
+
+<h2>4</h2>
+
+<p>Consoles</p>
+
+</div>
+
+</div>
+
+<div class="menu">
+
+<a href="nova.html">
+
+<button>
+
+➕ Nova Franquia
+
+</button>
+
+</a>
+
+<a href="biblioteca.html">
+
+<button>
+
+📚 Biblioteca
+
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+<script src="admin.js"></script>
+
+<script>
+
+carregarDashboard();
+
+</script>
 
 </body>
 

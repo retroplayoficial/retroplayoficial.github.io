@@ -9,6 +9,140 @@ window.onload = function () {
 // GERAR ID AUTOMÁTICO
 // ======================
 
+async function carregarDashboard(){
+
+const consoles=[
+
+"snes",
+
+"megadrive",
+
+"gba",
+
+"n64"
+
+];
+
+let franquias=0;
+
+let jogos=0;
+
+for(const consoleNome of consoles){
+
+try{
+
+const resposta=
+
+await fetch(`../data/${consoleNome}/index.json`);
+
+const lista=
+
+await resposta.json();
+
+franquias+=lista.length;
+
+for(const arquivo of lista){
+
+try{
+
+const json=
+
+await fetch(`../data/${consoleNome}/${arquivo}`);
+
+const dados=
+
+await json.json();
+
+jogos+=dados.jogos.length;
+
+}
+
+catch{}
+
+}
+
+}
+
+catch{}
+
+}
+
+document.getElementById("totalFranquias").innerHTML=
+
+franquias;
+
+document.getElementById("totalJogos").innerHTML=
+
+jogos;
+
+}async function carregarDashboard(){
+
+const consoles=[
+
+"snes",
+
+"megadrive",
+
+"gba",
+
+"n64"
+
+];
+
+let franquias=0;
+
+let jogos=0;
+
+for(const consoleNome of consoles){
+
+try{
+
+const resposta=
+
+await fetch(`../data/${consoleNome}/index.json`);
+
+const lista=
+
+await resposta.json();
+
+franquias+=lista.length;
+
+for(const arquivo of lista){
+
+try{
+
+const json=
+
+await fetch(`../data/${consoleNome}/${arquivo}`);
+
+const dados=
+
+await json.json();
+
+jogos+=dados.jogos.length;
+
+}
+
+catch{}
+
+}
+
+}
+
+catch{}
+
+}
+
+document.getElementById("totalFranquias").innerHTML=
+
+franquias;
+
+document.getElementById("totalJogos").innerHTML=
+
+jogos;
+
+}
+
 async function gerarID() {
 
     const consoleSelecionado = document.getElementById("console").value;
@@ -282,5 +416,250 @@ function baixarIndex(){
     link.click();
 
     URL.revokeObjectURL(link.href);
+
+}
+
+async function carregarBiblioteca() {
+
+    const consoles = [
+        "snes",
+        "megadrive",
+        "n64",
+        "gba"
+    ];
+
+    let html = '<div class="biblioteca-grid">';
+
+    for (const consoleNome of consoles) {
+
+        try {
+
+            const resposta =
+                await fetch(`../data/${consoleNome}/index.json`);
+
+            const lista =
+                await resposta.json();
+
+            for (const arquivo of lista) {
+
+                const json =
+                    await fetch(`../data/${consoleNome}/${arquivo}`);
+
+                const dados =
+                    await json.json();
+
+                html += `
+
+<div class="card-franquia">
+
+<img src="../${dados.imagem}" alt="${dados.nome}">
+
+<div class="card-body">
+
+<h3>${dados.nome}</h3>
+
+<p><strong>Console:</strong> ${dados.console.toUpperCase()}</p>
+
+<p><strong>Jogos:</strong> ${dados.jogos.length}</p>
+
+<p><strong>ID:</strong> ${dados.id}</p>
+
+<div class="botoes">
+
+<a href="../pages/${dados.colecao}.html">
+
+▶ Abrir
+
+</a>
+
+<a href="editar.html?id=${dados.id}">
+
+✏ Editar
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+`;
+
+            }
+
+        } catch (erro) {
+
+            console.log(erro);
+
+        }
+
+    }
+
+    html += "</div>";
+
+    document.getElementById("listaFranquias").innerHTML = html;
+
+}
+
+function criarMenu() {
+
+    return `
+
+<aside class="sidebar">
+
+    <h2>🎮 RetroPlay</h2>
+
+    <nav>
+
+        <a href="dashboard.html">🏠 Dashboard</a>
+
+        <a href="biblioteca.html">📚 Biblioteca</a>
+
+        <a href="index.html">➕ Nova Franquia</a>
+
+        <a href="editar.html">✏ Editar</a>
+
+    </nav>
+
+</aside>
+
+`;
+
+}
+
+async function carregarEditor() {
+
+    const params = new URLSearchParams(window.location.search);
+
+    const id = params.get("id");
+
+    if (!id) {
+
+        document.getElementById("conteudo").innerHTML =
+        "<h2>Nenhuma franquia selecionada.</h2>";
+
+        return;
+
+    }
+
+    const consoles = [
+
+        "snes",
+        "megadrive",
+        "n64",
+        "gba"
+
+    ];
+
+    for (const consoleNome of consoles) {
+
+        try {
+
+            const resposta =
+            await fetch(`../data/${consoleNome}/index.json`);
+
+            const lista =
+            await resposta.json();
+
+            for (const arquivo of lista) {
+
+                const json =
+                await fetch(`../data/${consoleNome}/${arquivo}`);
+
+                const dados =
+                await json.json();
+
+                if (dados.id == id) {
+
+                    mostrarEditor(dados);
+
+                    return;
+
+                }
+
+            }
+
+        }
+
+        catch {}
+
+    }
+
+}
+
+function mostrarEditor(dados){
+
+let html = `
+
+<h2>${dados.nome}</h2>
+
+<p>
+
+<strong>ID:</strong>
+
+${dados.id}
+
+</p>
+
+<p>
+
+<strong>Console:</strong>
+
+${dados.console.toUpperCase()}
+
+</p>
+
+<p>
+
+<strong>Descrição:</strong>
+
+</p>
+
+<textarea
+id="novaDescricao"
+style="width:100%;height:120px;">
+
+${dados.descricao}
+
+</textarea>
+
+<h3>Jogos</h3>
+
+`;
+
+dados.jogos.forEach(jogo=>{
+
+html += `
+
+<div class="card">
+
+<b>${jogo.nome}</b>
+
+<br>
+
+ROM:
+
+${jogo.arquivo}
+
+</div>
+
+`;
+
+});
+
+html += `
+
+<br>
+
+<button>
+
+💾 Salvar
+
+</button>
+
+`;
+
+document.getElementById("conteudo").innerHTML = html;
 
 }

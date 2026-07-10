@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RetroPlay CMS - Dashboard</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- Menu -->
+        <div id="menu"></div>
+
+        <!-- Conteúdo -->
+        <div class="main">
+
+            <h1>🎮 Dashboard</h1>
+
+            <div class="cards">
+
+                <div class="info">
+
+                    <h2 id="totalFranquias">0</h2>
+
+                    <p>Franquias</p>
+
+                </div>
+
+                <div class="info">
+
+                    <h2 id="totalJogos">0</h2>
+
+                    <p>Jogos</p>
+
+                </div>
+
+                <div class="info">
+
+                    <h2>4</h2>
+
+                    <p>Consoles</p>
+
+                </div>
+
+            </div>
+
+            <div class="menu">
+
+                <a href="index.html">
+
+                    <button>➕ Nova Franquia</button>
+
+                </a>
+
+                <a href="biblioteca.html">
+
+                    <button>📚 Biblioteca</button>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="admin.js"></script>
+
+    <script>
+
+        document.getElementById("menu").innerHTML = criarMenu();
+
+        carregarDashboard();
+
+    </script>
+
+</body>
+
+</html>
