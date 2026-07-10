@@ -246,7 +246,10 @@ async function carregarBiblioteca() {
     html += "</div>";
 
     // Insere o HTML primeiro, depois faz a contagem correta
-    document.getElementById("listaFranquias").innerHTML = html;
+        document.getElementById("listaFranquias").innerHTML = html;
+
+document.getElementById("totalBiblioteca").innerHTML =
+document.querySelectorAll(".card-franquia").length;
     document.getElementById("totalBiblioteca").innerHTML = document.querySelectorAll(".card-franquia").length;
 }
 
