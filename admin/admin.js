@@ -577,6 +577,14 @@ function publicarColecao(){
     if(!validarColecao())
         return;
 
-    alert("✅ Coleção validada com sucesso!\n\nPronta para publicação.");
+    // Gera todos os arquivos
+
+gerarJSON();
+
+gerarDatabase();
+
+// Mensagem final
+
+mostrarLogPublicacao();
 
 }
