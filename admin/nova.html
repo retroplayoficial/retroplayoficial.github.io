@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Nova Franquia</title>
+
+<link rel="stylesheet"
+href="admin.css">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+    <div id="menu"></div>
+
+    <div class="main">
+
+        <h1>🎮 Nova Franquia</h1>
+
+        <!-- DADOS -->
+
+        <div class="card">
+
+            <h2>📋 Dados da Coleção</h2>
+
+            <label>ID</label>
+
+            <input
+            id="id"
+            type="text"
+            readonly>
+
+            <label>Console</label>
+
+            <select
+            id="console"
+            onchange="gerarID();atualizarPreview();atualizarResumo();">
+
+                <option value="snes">
+                Super Nintendo
+                </option>
+
+                <option value="megadrive">
+                Mega Drive
+                </option>
+
+                <option value="n64">
+                Nintendo 64
+                </option>
+
+                <option value="gba">
+                Game Boy Advance
+                </option>
+
+            </select>
+
+            <label>Nome da Coleção</label>
+
+            <input
+            id="nome"
+            type="text"
+            placeholder="Ex.: Mario Collection"
+            onkeyup="atualizarColecao();atualizarPreview();atualizarResumo();">
+
+            <label>Slug da Coleção</label>
+
+            <input
+            id="colecao"
+            type="text"
+            readonly>
+
+            <label>Cor da Coleção</label>
+
+            <input
+id="cor"
+type="color"
+value="#FFD700"
+oninput="atualizarPreview()">
+
+            <label>Descrição</label>
+
+            <textarea
+            id="descricao"
+            placeholder="Descrição da coleção..."></textarea>
+
+        </div>
+
+        <!-- JOGOS -->
+
+        <div class="card">
+
+            <h2>🎮 Jogos</h2>
+
+            <div id="listaJogos"></div>
+
+            <button
+            onclick="adicionarJogo();atualizarPreview();atualizarResumo();">
+
+            ➕ Adicionar Jogo
+
+            </button>
+
+        </div>
+
+        <!-- IMAGENS -->
+
+        <div class="card">
+
+            <h2>🖼 Imagens</h2>
+
+            <label>Card</label>
+
+            <input
+            type="file"
+            accept="image/*"
+            onchange="previewImagem(this,'previewCard')">
+
+            <img
+            id="previewCard"
+            class="preview">
+
+            <br><br>
+
+            <label>Banner</label>
+
+            <input
+            type="file"
+            accept="image/*"
+            onchange="previewImagem(this,'previewBanner')">
+
+            <img
+            id="previewBanner"
+            class="preview">
+
+        </div>
+
+        <!-- EXPORTAÇÃO -->
+
+        <div class="card">
+            <div class="card">
+
+    <h2>📋 Resumo da Publicação</h2>
+
+    <div id="resumoPublicacao" class="resumo-publicacao">
+
+        <p><strong>ID:</strong> <span id="resumoID">-</span></p>
+
+        <p><strong>Console:</strong> <span id="resumoConsole">-</span></p>
+
+        <p><strong>Coleção:</strong> <span id="resumoColecao">-</span></p>
+
+        <p><strong>Pasta:</strong> <span id="resumoPasta">-</span></p>
+
+        <p><strong>Arquivo JSON:</strong> <span id="resumoJSON">-</span></p>
+
+        <p><strong>Jogos:</strong> <span id="resumoJogos">0</span></p>
+
+        <p><strong>Card:</strong> card.jpg</p>
+
+        <p><strong>Banner:</strong> banner.jpg</p>
+
+    </div>
+
+</div>
+
+<h2>👀 Preview da Coleção</h2>
+
+<div id="previewColecao" class="previewColecao">
+
+<img
+id="previewCardColecao"
+src="../images/sem-imagem.png"
+style="width:220px;border-radius:10px;display:block;margin:auto;">
+
+<h2 id="previewNome">
+
+Nova Coleção
+
+</h2>
+
+<p id="previewConsole">
+
+Super Nintendo
+
+</p>
+
+<p id="previewID">
+
+RPSNES0001
+
+</p>
+
+<p id="previewJogos">
+
+0 Jogos
+
+</p>
+
+</div>
+
+</div>
+
+            <h2>📦 Exportação</h2>
+
+            <button onclick="gerarJSON()">
+
+            📄 Gerar JSON
+
+            </button>
+
+            <button onclick="baixarJSON()">
+
+            ⬇ Baixar JSON
+
+            </button>
+
+            <button onclick="baixarIndex()">
+
+            📂 Baixar Index
+
+            </button>
+
+            <button onclick="baixarDatabase()">
+
+            🗂 Database
+
+            </button>
+
+            <button
+id="btnPublicar"
+onclick="publicarColecao()">
+
+🚀 Publicar Coleção
+
+</button>
+
+        </div>
+
+        <!-- JSON -->
+
+        <div class="card">
+
+            <h2>JSON</h2>
+
+            <textarea
+            id="saidaJson"></textarea>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="admin.js"></script>
+
+<script>
+
+document.getElementById("menu").innerHTML =
+criarMenu();
+
+gerarID();
+
+adicionarJogo();
+
+atualizarPreview();
+
+atualizarResumo();
+
+</script>
+
+</body>
+
+</html>

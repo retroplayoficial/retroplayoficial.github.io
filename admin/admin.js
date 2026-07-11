@@ -176,16 +176,40 @@ function mostrarAba(nome) {
 // PRÉ-VISUALIZAÇÃO DAS IMAGENS
 // ======================
 
-function previewImagem(input, id) {
-    if (!input.files.length) return;
+// ======================================
+// PREVIEW DAS IMAGENS
+// ======================================
+
+function previewImagem(input,id){
+
+    if(!input.files.length)
+        return;
 
     const reader = new FileReader();
-    reader.onload = function (e) {
-        const img = document.getElementById(id);
+
+    reader.onload = function(e){
+
+        const img =
+        document.getElementById(id);
+
         img.src = e.target.result;
+
         img.style.display = "block";
-    };
+
+        // Atualiza também o Preview da Coleção
+
+        if(id=="previewCard"){
+
+            document
+            .getElementById("previewCardColecao")
+            .src=e.target.result;
+
+        }
+
+    }
+
     reader.readAsDataURL(input.files[0]);
+
 }
 
 function baixarIndex() {
@@ -349,4 +373,210 @@ function filtrarBiblioteca() {
     });
 
     document.getElementById("totalBiblioteca").innerHTML = total;
+}
+
+// ======================================
+// PREVIEW DA COLEÇÃO
+// ======================================
+
+function atualizarPreview(){
+
+    
+const nome =
+document.getElementById("nome").value;
+
+const consoleSelecionado =
+document.getElementById("console");
+
+const id =
+document.getElementById("id").value;
+
+const jogos =
+document.querySelectorAll(".jogo").length;
+
+document.getElementById("previewNome").innerHTML =
+nome || "Nova Coleção";
+
+document.getElementById("previewConsole").innerHTML =
+consoleSelecionado.options[
+consoleSelecionado.selectedIndex
+].text;
+
+document.getElementById("previewID").innerHTML =
+id;
+
+document.getElementById("previewJogos").innerHTML =
+jogos + " Jogos";
+
+const cor =
+document.getElementById("cor").value;
+
+document
+.getElementById("previewColecao")
+.style.border =
+"4px solid " + cor;
+
+}
+
+// ======================================
+// RESUMO DA PUBLICAÇÃO
+// ======================================
+
+function atualizarResumo(){
+
+    const id =
+    document.getElementById("id").value;
+
+    const consoleSelecionado =
+    document.getElementById("console").value;
+
+    const nome =
+    document.getElementById("nome").value;
+
+    const colecao =
+    document.getElementById("colecao").value;
+
+    const jogos =
+    document.querySelectorAll(".jogo").length;
+
+    document.getElementById("resumoID").innerHTML =
+    id;
+
+    document.getElementById("resumoConsole").innerHTML =
+    consoleSelecionado.toUpperCase();
+
+    document.getElementById("resumoColecao").innerHTML =
+    nome || "-";
+
+    document.getElementById("resumoPasta").innerHTML =
+    `roms/${consoleSelecionado}/${colecao}/`;
+
+    document.getElementById("resumoJSON").innerHTML =
+    `${colecao}.json`;
+
+    document.getElementById("resumoJogos").innerHTML =
+    jogos;
+
+}
+
+// ======================================
+// VALIDAÇÃO DA COLEÇÃO
+// ======================================
+
+function validarColecao(){
+
+    const nome =
+    document.getElementById("nome").value.trim();
+
+    const id =
+    document.getElementById("id").value.trim();
+
+    const consoleSelecionado =
+    document.getElementById("console").value;
+
+    const colecao =
+    document.getElementById("colecao").value.trim();
+
+    const descricao =
+    document.getElementById("descricao").value.trim();
+
+    const cor =
+    document.getElementById("cor").value;
+
+    const jogos =
+    document.querySelectorAll(".jogo");
+
+    const card =
+    document.getElementById("previewCard").src;
+
+    const banner =
+    document.getElementById("previewBanner").src;
+
+    if(nome==""){
+
+        alert("❌ Informe o nome da coleção.");
+
+        return false;
+
+    }
+
+    if(id==""){
+
+        alert("❌ ID inválido.");
+
+        return false;
+
+    }
+
+    if(consoleSelecionado==""){
+
+        alert("❌ Selecione um console.");
+
+        return false;
+
+    }
+
+    if(colecao==""){
+
+        alert("❌ O Slug da coleção não foi gerado.");
+
+        return false;
+
+    }
+
+    if(descricao==""){
+
+        alert("❌ Informe a descrição.");
+
+        return false;
+
+    }
+
+    if(cor==""){
+
+        alert("❌ Escolha uma cor.");
+
+        return false;
+
+    }
+
+    if(jogos.length==0){
+
+        alert("❌ Cadastre pelo menos um jogo.");
+
+        return false;
+
+    }
+
+    if(!card || card.includes("undefined")){
+
+        alert("❌ Selecione a imagem do Card.");
+
+        return false;
+
+    }
+
+    if(!banner || banner.includes("undefined")){
+
+        alert("❌ Selecione a imagem do Banner.");
+
+        return false;
+
+    }
+
+    return true;
+
+}
+
+// ======================================
+// PUBLICAR
+// ======================================
+
+function publicarColecao(){
+
+    if(!validarColecao())
+        return;
+
+    alert("✅ Coleção validada com sucesso!\n\nPronta para publicação.");
+
 }

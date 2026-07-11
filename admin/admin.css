@@ -418,3 +418,59 @@ textarea{
 }
 
 }
+
+.previewColecao{
+
+background:#202020;
+
+padding:25px;
+
+border-radius:15px;
+
+text-align:center;
+
+box-shadow:0 0 15px rgba(0,0,0,.4);
+
+margin-top:20px;
+
+}
+
+.previewColecao h2{
+
+margin-top:20px;
+
+margin-bottom:10px;
+
+font-size:28px;
+
+}
+
+.previewColecao p{
+
+margin:8px;
+
+font-size:18px;
+
+}
+
+.resumo-publicacao{
+
+background:#181818;
+
+border:2px solid #333;
+
+border-radius:10px;
+
+padding:20px;
+
+line-height:1.8;
+
+font-size:16px;
+
+}
+
+.resumo-publicacao p{
+
+margin:8px 0;
+
+}
