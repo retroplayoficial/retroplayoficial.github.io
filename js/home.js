@@ -1,7 +1,10 @@
 async function carregarHome() {
 
     const resposta = await fetch("data/consoles.json");
-    const consoles = await resposta.json();
+
+    const dados = await resposta.json();
+
+    const consoles = dados.consoles || [];
 
     let html = "";
 
@@ -11,14 +14,16 @@ async function carregarHome() {
             <div class="card">
 
                 <div class="imagem">
-                    <img src="${consoleItem.imagem}" alt="${consoleItem.nome}">
+                    <img src="images/consoles/${consoleItem.id}.png"
+     alt="${consoleItem.nome}"
+     onerror="this.src='images/consoles/default.png'">
                 </div>
 
                 <h2>${consoleItem.nome}</h2>
 
                 <a class="botao"
                    href="console.html?console=${consoleItem.id}">
-                   Abrir
+                    Abrir
                 </a>
 
             </div>

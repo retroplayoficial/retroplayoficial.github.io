@@ -1,6 +1,37 @@
 {
-    "versao":"1.0",
-    "ultimaAtualizacao":"",
-    "totalColecoes":0,
-    "colecoes":[]
+    "versao": "1.0",
+    "ultimaAtualizacao": "15/07/2026",
+    "totalColecoes": 5,
+    "colecoes": [
+        {
+            "id": "RP-SNES-9992",
+            "nome": "Mario Colection",
+            "console": "snes",
+            "arquivo": "data/snes/mario-colection.json"
+        },
+        {
+            "id": "RP-SNES-1603",
+            "nome": "donkey kong colection teste",
+            "console": "snes",
+            "arquivo": "data/snes/donkey-kong-colection-teste.json"
+        },
+        {
+            "id": "RP-SNES-4397",
+            "nome": "teste teste",
+            "console": "snes",
+            "arquivo": "data/snes/teste-teste.json"
+        },
+        {
+            "id": "RP-SNES-9735",
+            "nome": "teste03",
+            "console": "snes",
+            "arquivo": "data/snes/teste03.json"
+        },
+        {
+            "id": "RP-MEGADRIVE-2278",
+            "nome": "sonic",
+            "console": "megadrive",
+            "arquivo": "data/megadrive/sonic.json"
+        }
+    ]
 }

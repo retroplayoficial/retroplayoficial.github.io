@@ -1,22 +1,90 @@
-[
-    {
-        "id": "snes",
-        "nome": "Super Nintendo",
-        "imagem": "images/consoles/snes.jpg"
-    },
-    {
-        "id": "megadrive",
-        "nome": "Mega Drive",
-        "imagem": "images/consoles/megadrive.jpg"
-    },
-    {
-        "id": "n64",
-        "nome": "Nintendo 64",
-        "imagem": "images/consoles/n64.jpg"
-    },
-    {
-        "id": "gba",
-        "nome": "Game Boy Advance",
-        "imagem": "images/consoles/gba.jpg"
-    }
-]
+{
+    "consoles": [
+        {
+            "id": "snes",
+            "nome": "Super Nintendo",
+            "extensoes": [
+                ".smc",
+                ".sfc"
+            ],
+            "emulador": "snes",
+            "imagem": "snes.jpg"
+        },
+        {
+            "id": "megadrive",
+            "nome": "Mega Drive",
+            "extensoes": [
+                ".bin",
+                ".md"
+            ],
+            "emulador": "genesis_plus_gx",
+            "imagem": "megadrive.png"
+        },
+        {
+            "id": "n64",
+            "nome": "Nintendo 64",
+            "extensoes": [
+                ".z64",
+                ".n64"
+            ],
+            "emulador": "n64",
+            "imagem": "n64.png"
+        },
+        {
+            "id": "gba",
+            "nome": "Game Boy Advance",
+            "extensoes": [
+                ".gba"
+            ],
+            "emulador": "mgba",
+            "imagem": "gba.png"
+        },
+        {
+            "id": "ps1",
+            "nome": "PlayStation 1",
+            "emulador": "psx",
+            "extensoes": [
+                ".bin",
+                ".cue",
+                ".chd",
+                ".iso",
+                ".img"
+            ],
+            "imagem": "ps1.jpg"
+        },
+        {
+            "id": "ps2",
+            "nome": "PlayStation 2",
+            "emulador": "ps2",
+            "imagem": "ps2.png",
+            "extensoes": [
+                ".iso",
+                ".bin",
+                ".cue",
+                ".chd"
+            ]
+        },
+        {
+            "id": "dreamcast",
+            "nome": "Dreamcast",
+            "emulador": "flycast",
+            "imagem": "dreamcast.png",
+            "extensoes": [
+                ".cdi",
+                ".gdi",
+                ".chd"
+            ]
+        },
+        {
+            "id": "psp",
+            "nome": "PSP",
+            "emulador": "ppsspp",
+            "imagem": "psp.png",
+            "extensoes": [
+                ".iso",
+                ".cso",
+                ".chd"
+            ]
+        }
+    ]
+}

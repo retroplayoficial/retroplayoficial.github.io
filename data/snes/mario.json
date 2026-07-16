@@ -1,58 +1,6 @@
 {
-    "id": "RP000001",
-
+    "id": "mario bros",
+    "nome": "mario",
     "console": "snes",
-
-    "colecao": "mario",
-
-    "imagem":"images/snes/mario/card.jpg",
-
-    "nome": "Mario Collection",
-
-    "descricao": "Os maiores clássicos do Mario.",
-
-    "banner":"images/snes/mario/banner.jpg",
-
-    "capa":"images/snes/mario/card.jpg",
-
-    "cor": "#E60012",
-
-    "jogos": [
-
-        {
-            "id": "smw",
-            "nome": "Super Mario World",
-            "ano": "1991",
-            "arquivo": "super-mario-world.smc"
-        },
-
-        {
-            "id": "mk",
-            "nome": "Mario Kart",
-            "ano": "1992",
-            "arquivo": "mario-kart.smc"
-        },
-
-        {
-            "id": "mrpg",
-            "nome": "Mario RPG",
-            "ano": "1996",
-            "arquivo": "mario-rpg.smc"
-        },
-
-        {
-            "id": "mas",
-            "nome": "Mario All-Stars",
-            "ano": "1993",
-            "arquivo": "mario-all-stars.smc"
-        },
-
-        {
-            "id": "yi",
-            "nome": "Yoshi's Island",
-            "ano": "1995",
-            "arquivo": "yoshi-island.smc"
-        }
-
-    ]
+    "jogos": []
 }

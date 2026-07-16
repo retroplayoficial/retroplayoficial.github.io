@@ -1,0 +1,17 @@
+{
+    "id": "RP-SNES-6234",
+    "nome": "Mario Colection",
+    "console": "snes",
+    "jogos": [
+        {
+            "nome": "Super Mario World",
+            "arquivo": "Super Mario World (U) [!].smc",
+            "caminho": "C:\\Users\\edinho\\Desktop\\projeto nfc\\1-Jogos\\Nintendo SNES\\roms\\Super Mario World (U) [!].smc",
+            "banner": "",
+            "card": "",
+            "descricao": "",
+            "ano": "",
+            "genero": ""
+        }
+    ]
+}

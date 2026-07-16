@@ -1,0 +1,17 @@
+{
+    "id": "RP-SNES-1603",
+    "nome": "donkey kong colection teste",
+    "console": "snes",
+    "jogos": [
+        {
+            "id": "donkey-kong-country",
+            "nome": "Donkey Kong Country",
+            "arquivo": "Donkey Kong Country (USA) (Rev B).sfc"
+        },
+        {
+            "id": "donkey-kong-country-2-diddys-kong-quest",
+            "nome": "Donkey Kong Country 2 - Diddy's Kong Quest",
+            "arquivo": "Donkey Kong Country 2 - Diddy's Kong Quest (U) (V1.1) [!].smc"
+        }
+    ]
+}

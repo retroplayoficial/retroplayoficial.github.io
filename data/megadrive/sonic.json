@@ -1,0 +1,12 @@
+{
+    "id": "RP-MEGADRIVE-2278",
+    "nome": "sonic",
+    "console": "megadrive",
+    "jogos": [
+        {
+            "id": "sonic-classics",
+            "nome": "Sonic Classics",
+            "arquivo": "Sonic Classics (World) (v1.1).zip"
+        }
+    ]
+}

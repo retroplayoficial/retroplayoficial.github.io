@@ -1,0 +1,12 @@
+{
+    "id": "RP-SNES-4397",
+    "nome": "teste teste",
+    "console": "snes",
+    "jogos": [
+        {
+            "id": "7th-saga-the",
+            "nome": "7th Saga, The",
+            "arquivo": "7th Saga, The (U) [!].smc"
+        }
+    ]
+}

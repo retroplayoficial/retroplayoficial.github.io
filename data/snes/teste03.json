@@ -1,0 +1,12 @@
+{
+    "id": "RP-SNES-9735",
+    "nome": "teste03",
+    "console": "snes",
+    "jogos": [
+        {
+            "id": "3-ninjas-kick-back",
+            "nome": "3 Ninjas Kick Back",
+            "arquivo": "3 Ninjas Kick Back (U).smc"
+        }
+    ]
+}
