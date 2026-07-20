@@ -1,0 +1,25 @@
+{
+  "id": "mario",
+  "nome": "Mario Collection",
+  "console": "Super Nintendo",
+  "jogos": [
+    {
+      "id": "smw",
+      "nome": "Super Mario World",
+      "rom": "super-mario-world.smc",
+      "capa": "images/colecoes/mario/jogos/super-mario-world.jpg"
+    },
+    {
+      "id": "mk",
+      "nome": "Super Mario Kart",
+      "rom": "mario-kart.smc",
+      "capa": "images/colecoes/mario/jogos/mario-kart.jpg"
+    },
+    {
+      "id": "yi",
+      "nome": "Yoshi's Island",
+      "rom": "yoshi-island.smc",
+      "capa": "images/colecoes/mario/jogos/yoshis-island.jpg"
+    }
+  ]
+}

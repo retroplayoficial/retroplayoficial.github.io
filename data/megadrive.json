@@ -1,0 +1,33 @@
+{
+  "console": "Mega Drive",
+  "colecoes": [
+    {
+      "id": "sonic",
+      "nome": "Sonic Collection",
+      "banner": "images/colecoes/sonic/banner.webp",
+      "logo": "images/colecoes/sonic/logo.webp",
+      "cover": "images/colecoes/sonic/cover.webp"
+    },
+    {
+      "id": "streetsofrage",
+      "nome": "Streets of Rage",
+      "banner": "images/colecoes/streetsofrage/banner.webp",
+      "logo": "images/colecoes/streetsofrage/logo.webp",
+      "cover": "images/colecoes/streetsofrage/cover.webp"
+    },
+    {
+      "id": "goldenaxe",
+      "nome": "Golden Axe",
+      "banner": "images/colecoes/goldenaxe/banner.webp",
+      "logo": "images/colecoes/goldenaxe/logo.webp",
+      "cover": "images/colecoes/goldenaxe/cover.webp"
+    },
+    {
+      "id": "shinobi",
+      "nome": "Shinobi Collection",
+      "banner": "images/colecoes/shinobi/banner.webp",
+      "logo": "images/colecoes/shinobi/logo.webp",
+      "cover": "images/colecoes/shinobi/cover.webp"
+    }
+  ]
+}

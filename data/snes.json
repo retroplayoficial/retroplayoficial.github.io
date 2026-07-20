@@ -1,0 +1,33 @@
+{
+  "console": "Super Nintendo",
+  "colecoes": [
+    {
+      "id": "mario",
+      "nome": "Mario Collection",
+      "banner": "images/colecoes/mario/banner.jpg",
+      "logo": "images/colecoes/mario/logo.jpg",
+      "cover": "images/colecoes/mario/cover.jpg"
+    },
+    {
+      "id": "zelda",
+      "nome": "Zelda Collection",
+      "banner": "images/colecoes/zelda/banner.jpg",
+      "logo": "images/colecoes/zelda/logo.jpg",
+      "cover": "images/colecoes/zelda/cover.jpg"
+    },
+    {
+      "id": "donkeykong",
+      "nome": "Donkey Kong Collection",
+      "banner": "images/colecoes/donkeykong/banner.jpg",
+      "logo": "images/colecoes/donkeykong/logo.jpg",
+      "cover": "images/colecoes/donkeykong/cover.jpg"
+    },
+    {
+      "id": "megamanx",
+      "nome": "Mega Man X Collection",
+      "banner": "images/colecoes/megamanx/banner.jpg",
+      "logo": "images/colecoes/megamanx/logo.jpg",
+      "cover": "images/colecoes/megamanx/cover.jpg"
+    }
+  ]
+}
