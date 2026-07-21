@@ -4,30 +4,30 @@
     {
       "id": "sonic",
       "nome": "Sonic Collection",
-      "banner": "images/colecoes/sonic/banner.webp",
-      "logo": "images/colecoes/sonic/logo.webp",
-      "cover": "images/colecoes/sonic/cover.webp"
+      "banner": "images/colecoes/sonic/banner.jpg",
+      "logo": "images/colecoes/sonic/logo.jpg",
+      "cover": "images/colecoes/sonic/cover.jpg"
     },
     {
       "id": "streetsofrage",
       "nome": "Streets of Rage",
-      "banner": "images/colecoes/streetsofrage/banner.webp",
-      "logo": "images/colecoes/streetsofrage/logo.webp",
-      "cover": "images/colecoes/streetsofrage/cover.webp"
+      "banner": "images/colecoes/streetsofrage/banner.jpg",
+      "logo": "images/colecoes/streetsofrage/logo.jpg",
+      "cover": "images/colecoes/streetsofrage/cover.jpg"
     },
     {
       "id": "goldenaxe",
       "nome": "Golden Axe",
-      "banner": "images/colecoes/goldenaxe/banner.webp",
-      "logo": "images/colecoes/goldenaxe/logo.webp",
-      "cover": "images/colecoes/goldenaxe/cover.webp"
+      "banner": "images/colecoes/goldenaxe/banner.jpg",
+      "logo": "images/colecoes/goldenaxe/logo.jpg",
+      "cover": "images/colecoes/goldenaxe/cover.jpg"
     },
     {
       "id": "shinobi",
       "nome": "Shinobi Collection",
-      "banner": "images/colecoes/shinobi/banner.webp",
-      "logo": "images/colecoes/shinobi/logo.webp",
-      "cover": "images/colecoes/shinobi/cover.webp"
+      "banner": "images/colecoes/shinobi/banner.jpg",
+      "logo": "images/colecoes/shinobi/logo.jpg",
+      "cover": "images/colecoes/shinobi/cover.jpg"
     }
   ]
 }

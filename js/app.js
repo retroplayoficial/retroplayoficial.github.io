@@ -13,6 +13,17 @@ const consoles = [
     }
 ];
 
+// Configuração inicial dos botões do Menu
+document.addEventListener("DOMContentLoaded", () => {
+    const btnHome = document.getElementById("btnHome");
+    const btnConsoles = document.getElementById("btnConsoles");
+    const btnColecoes = document.getElementById("btnColecoes");
+
+    if (btnHome) btnHome.onclick = () => mostrarHome();
+    if (btnConsoles) btnConsoles.onclick = () => mostrarHome(); // Exibe lista de consoles
+    if (btnColecoes) btnColecoes.onclick = () => abrirPagina("pages/colecoes.html");
+});
+
 mostrarHome();
 
 function mostrarHome(){
@@ -20,9 +31,9 @@ function mostrarHome(){
     <div class="hero">
         <h2>RetroPlay Oficial</h2>
         <p>Sua coleção retrô em um único lugar.</p>
-        <button>Explorar Biblioteca</button>
+        <button onclick="abrirPagina('pages/colecoes.html')">Explorar Biblioteca</button>
     </div>
-    <section>
+    <section class="container">
         <h3 class="titulo">Escolha um Console</h3>
         <div class="cards">
             ${consoles.map(c=>`
@@ -42,16 +53,51 @@ function mostrarHome(){
     });
 }
 
+// Função genérica para carregar páginas HTML dinamicamente
+async function abrirPagina(caminho) {
+    const resposta = await fetch(caminho);
+    conteudo.innerHTML = await resposta.text();
+
+    // Se for a página de coleções, carrega a lista dinâmica de coleções
+    if (caminho === "pages/colecoes.html") {
+        carregarColecoes();
+    }
+}
+
+async function carregarColecoes(){
+    const resposta = await fetch("data/colecoes/index.json");
+    const colecoes = await resposta.json();
+
+    const lista = document.getElementById("listaColecoes");
+
+    if (lista) {
+        lista.innerHTML = "";
+
+        for(const item of colecoes){
+            const dados = await fetch(`data/colecoes/${item.arquivo}`);
+            const colecao = await dados.json();
+
+            lista.innerHTML += `
+            <div class="card-colecao" onclick="abrirJogos('${colecao.id}')">
+                <img src="${colecao.banner}">
+                <h2>${colecao.nome}</h2>
+                <p>${colecao.console}</p>
+            </div>
+            `;
+        }
+    }
+}
+
 async function abrirConsole(consoleSelecionado){
     const resposta = await fetch(`data/${consoleSelecionado}.json`);
     const dados = await resposta.json();
 
     conteudo.innerHTML = `
-    <section>
+    <section class="container">
         <h1 class="titulo">
             ${dados.console}
         </h1>
-        <p>
+        <p style="margin-bottom: 20px; color: #aaa;">
             Escolha uma coleção.
         </p>
         <div class="cards">
@@ -101,7 +147,7 @@ async function abrirColecao(consoleNome, colecao){
             <h2>${j.nome}</h2>
             <button 
                 class="btn-jogar"
-                onclick="jogar('${j.rom}')">
+                onclick="abrirJogo('${colecao}', '${j.id}')">
                 ▶ Jogar
             </button>
         </div>
@@ -117,41 +163,111 @@ async function abrirJogos(colecao){
 
     conteudo.innerHTML = await pagina.text();
 
-    document.getElementById("tituloJogo").innerHTML = `
-    ${dados.nome}
-    <br>
-    <small>${dados.console}</small>
-    `;
+    // Injeção do Banner e da Descrição da Coleção
+    const bannerElem = document.getElementById("bannerColecao");
+    if (bannerElem) {
+        bannerElem.innerHTML = `
+        <img src="${dados.banner}"
+        style="width:100%;height:100%;object-fit:cover;border-radius:15px;">
+        `;
+    }
+
+    const descElem = document.getElementById("descricaoColecao");
+    if (descElem) {
+        descElem.innerText = dados.descricao;
+    }
+
+    const tituloElem = document.getElementById("tituloJogo");
+    if (tituloElem) {
+        tituloElem.innerHTML = `
+        ${dados.nome}
+        <br>
+        <small>${dados.console}</small>
+        `;
+    }
 
     const lista = document.getElementById("listaJogos");
 
-    lista.innerHTML = dados.jogos.map(j=>`
-    <div class="card">
-        <div class="card-banner">
-            <img src="${j.capa}"
-            style="
-            width:100%;
-            height:100%;
-            object-fit:cover;
-            ">
-        </div>
+    if (lista) {
+        lista.innerHTML = dados.jogos.map(j=>`
+        <div class="card">
+            <div class="card-banner">
+                <img src="${j.capa}"
+                style="
+                width:100%;
+                height:100%;
+                object-fit:cover;
+                ">
+            </div>
 
-        <div class="card-info">
-            <h2>
-            ${j.nome}
-            </h2>
+            <div class="card-info">
+                <h2>
+                ${j.nome}
+                </h2>
 
-            <button 
-            class="btn-jogar"
-            onclick="jogar('${j.rom}')">
-            ▶ Jogar
-            </button>
+                <button 
+                class="btn-jogar"
+                onclick="abrirJogo('${colecao}', '${j.id}')">
+                ▶ Jogar
+                </button>
+            </div>
         </div>
-    </div>
-    `).join("");
+        `).join("");
+    }
+}
+
+// Função para abrir a página detalhada do jogo selecionado
+async function abrirJogo(colecao, id){
+    const resposta = await fetch(`data/colecoes/${colecao}.json`);
+    const dados = await resposta.json();
+
+    const jogo = dados.jogos.find(j => j.id === id);
+
+    const pagina = await fetch("pages/jogo.html");
+
+    conteudo.innerHTML = await pagina.text();
+
+    // Preenche informações do jogo
+    const nomeElem = document.getElementById("nomeJogo");
+    if (nomeElem) nomeElem.innerText = jogo.nome;
+
+    const consoleElem = document.getElementById("consoleJogo");
+    if (consoleElem) consoleElem.innerText = dados.console;
+
+    const descElem = document.getElementById("descricaoJogo");
+    if (descElem) {
+        descElem.innerText = dados.descricao || "Jogue este clássico diretamente pelo RetroPlay Oficial.";
+    }
+
+    const capaElem = document.getElementById("capaJogo");
+    if (capaElem) capaElem.src = jogo.capa;
+
+    const bannerElem = document.getElementById("bannerJogo");
+    if (bannerElem && dados.banner) {
+        bannerElem.src = dados.banner;
+    }
+
+    const btnVoltar = document.getElementById("btnVoltar");
+    if (btnVoltar) {
+        btnVoltar.onclick = () => abrirJogos(colecao);
+    }
+
+    const btnJogar = document.getElementById("btnJogar");
+    if (btnJogar) {
+        btnJogar.onclick = () => {
+            jogar(
+                dados.consoleId,
+                colecao,
+                jogo.rom
+            );
+        };
+    }
 }
 
 // Função para redirecionar para a página do emulador passando a ROM
-function jogar(rom){
-    window.location.href = `emulator/index.html?rom=snes/mario/${rom}`;
+function jogar(console, colecao, rom){
+
+    window.location.href =
+    `emulator/index.html?rom=${console}/${colecao}/${rom}`;
+
 }

@@ -1,0 +1,47 @@
+{
+  "id": "streetofrage",
+
+  "nome": "Street of Rage Collection",
+
+  "console": "Mega Drive",
+
+  "consoleId": "megadrive",
+
+  "banner": "images/colecoes/streetsofrage/banner.jpg",
+
+  "descricao": "Os maiores clássicos da série Street of Rage para Mega Drive.",
+
+  "jogos": [
+
+    {
+      "id": "sor1",
+
+      "nome": "Street of Rage",
+
+      "rom": "street-of-rage-1.smd",
+
+      "capa": "images/colecoes/streetofrage/sor1.jpg"
+    },
+
+    {
+      "id": "sor2",
+
+      "nome": "Street of Rage 2",
+
+      "rom": "street-of-rage-2.smd",
+
+      "capa": "images/colecoes/streetofrage/sor2.jpg"
+    },
+
+    {
+      "id": "sor3",
+
+      "nome": "Street of Rage 3",
+
+      "rom": "street-of-rage-3.smd",
+
+      "capa": "images/colecoes/streetofrage/sor3.jpg"
+    }
+
+  ]
+}

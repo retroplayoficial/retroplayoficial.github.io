@@ -1,7 +1,16 @@
 {
   "id": "mario",
+
   "nome": "Mario Collection",
+
+  "descricao": "Os maiores clássicos do Mario reunidos em uma única coleção.",
+
+  "banner": "images/colecoes/mario/banner.jpg",
+
   "console": "Super Nintendo",
+
+  "consoleId": "snes",
+
   "jogos": [
     {
       "id": "smw",
@@ -9,12 +18,14 @@
       "rom": "super-mario-world.smc",
       "capa": "images/colecoes/mario/jogos/super-mario-world.jpg"
     },
+
     {
       "id": "mk",
       "nome": "Super Mario Kart",
       "rom": "mario-kart.smc",
       "capa": "images/colecoes/mario/jogos/mario-kart.jpg"
     },
+
     {
       "id": "yi",
       "nome": "Yoshi's Island",

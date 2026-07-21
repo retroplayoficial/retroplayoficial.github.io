@@ -1,0 +1,67 @@
+{
+  "id": "sonic",
+
+  "nome": "Sonic Collection",
+
+  "console": "Mega Drive",
+
+  "consoleId": "megadrive",
+
+  "banner": "images/colecoes/sonic/banner.jpg",
+
+  "descricao": "Os maiores clássicos do Sonic para Mega Drive.",
+
+  "jogos": [
+
+    {
+      "id": "sonic1",
+
+      "nome": "Sonic The Hedgehog",
+
+      "rom": "sonic1.bin",
+
+      "capa": "images/colecoes/sonic/sonic1.jpg"
+    },
+
+    {
+      "id": "sonic2",
+
+      "nome": "Sonic The Hedgehog 2",
+
+      "rom": "sonic2.bin",
+
+      "capa": "images/colecoes/sonic/sonic2.jpg"
+    },
+
+    {
+      "id": "sonic3",
+
+      "nome": "Sonic The Hedgehog 3",
+
+      "rom": "sonic3.bin",
+
+      "capa": "images/colecoes/sonic/sonic3.jpg"
+    },
+
+    {
+      "id": "sonic-k",
+
+      "nome": "Sonic & Knuckles",
+
+      "rom": "sonic-knuckles.bin",
+
+      "capa": "images/colecoes/sonic/sonic-knuckles.jpg"
+    },
+
+    {
+      "id": "sonic-3d",
+
+      "nome": "Sonic 3D Blast",
+
+      "rom": "sonic-3d-blast.bin",
+
+      "capa": "images/colecoes/sonic/sonic-3d-blast.jpg"
+    }
+
+  ]
+}
