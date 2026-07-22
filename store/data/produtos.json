@@ -20,9 +20,9 @@
     "preco": "R$ 39,90",
     "banner": "../images/colecoes/zelda/banner.jpg",
     "descricao": "Coleção The Legend of Zelda para Super Nintendo.",
-    "estoque": 10,
+    "estoque": 1,
     "status": "disponivel",
-    "destaque": true,
+    "destaque": false,
     "whatsapp": "Olá! Tenho interesse no Cartucho NFC Zelda."
   },
   {
@@ -47,8 +47,8 @@
     "banner": "../images/colecoes/sonic/banner.jpg",
     "descricao": "Coleção Sonic para Mega Drive.",
     "estoque": 10,
-    "status": "disponivel",
-    "destaque": true,
+    "status": "Esgotado",
+    "destaque": false,
     "whatsapp": "Olá! Tenho interesse no Cartucho NFC Sonic."
   },
   {
@@ -74,7 +74,7 @@
     "descricao": "Coleção Pokémon para Game Boy Advance.",
     "estoque": 10,
     "status": "disponivel",
-    "destaque": false,
+    "destaque": true,
     "whatsapp": "Olá! Tenho interesse no Cartucho NFC Pokémon."
   }
 ]
