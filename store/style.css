@@ -382,6 +382,7 @@ HERO PREMIUM
 }
 
 }
+
 /* =======================
 COMO FUNCIONA
 ======================= */
@@ -459,6 +460,7 @@ COMO FUNCIONA
     line-height:1.5;
 
 }
+
 /* =======================
 VANTAGENS
 ======================= */
@@ -538,6 +540,7 @@ color:#d0d0d0;
 line-height:1.6;
 
 }
+
 /* =======================
 DESTAQUES
 ======================= */
@@ -671,10 +674,10 @@ height:220px;
 }
 
 }
+
 /* =======================
 BOTAO PRODUTO
 ======================= */
-
 
 .btn-produto{
 
@@ -700,7 +703,6 @@ transition:.3s;
 
 }
 
-
 .btn-produto:hover{
 
 background:#ff8b2b;
@@ -708,10 +710,10 @@ background:#ff8b2b;
 transform:scale(1.05);
 
 }
+
 /* =======================
 RODAPÉ
 ======================= */
-
 
 .rodape{
 
@@ -722,7 +724,6 @@ padding:60px 40px 20px;
 border-top:2px solid #ff6a00;
 
 }
-
 
 .rodape-conteudo{
 
@@ -738,7 +739,6 @@ margin:auto;
 
 }
 
-
 .rodape h3{
 
 color:#ff6a00;
@@ -749,7 +749,6 @@ margin-bottom:15px;
 
 }
 
-
 .rodape p{
 
 color:#ccc;
@@ -757,7 +756,6 @@ color:#ccc;
 line-height:1.7;
 
 }
-
 
 .copyright{
 
@@ -774,10 +772,10 @@ color:#777;
 font-size:14px;
 
 }
+
 /* =======================
 CARDS PREMIUM
 ======================= */
-
 
 .card{
 
@@ -793,7 +791,6 @@ transition:.3s;
 
 }
 
-
 .card:hover{
 
 transform:translateY(-8px);
@@ -802,8 +799,6 @@ box-shadow:
 0 15px 35px rgba(255,106,0,.35);
 
 }
-
-
 
 .card img{
 
@@ -815,15 +810,11 @@ object-fit:cover;
 
 }
 
-
-
 .card-info{
 
 padding:25px;
 
 }
-
-
 
 .card h3{
 
@@ -833,15 +824,11 @@ margin-bottom:10px;
 
 }
 
-
-
 .card p{
 
 color:#aaa;
 
 }
-
-
 
 .selo{
 
@@ -867,8 +854,6 @@ z-index:2;
 
 }
 
-
-
 .precos{
 
 margin:20px 0;
@@ -878,8 +863,6 @@ display:flex;
 flex-direction:column;
 
 }
-
-
 
 .antigo{
 
@@ -891,8 +874,6 @@ font-size:18px;
 
 }
 
-
-
 .preco{
 
 color:#00ff66;
@@ -903,15 +884,25 @@ font-weight:bold;
 
 }
 
-
-
 .status{
-
-color:#00ff66;
 
 margin-bottom:20px;
 
 font-weight:bold;
+
+font-size:18px;
+
+}
+
+.status.disponivel{
+
+color:#00ff66;
+
+}
+
+.status.esgotado{
+
+color:#ff3333;
 
 }
 
@@ -942,7 +933,6 @@ cursor:pointer;
 transition:.3s;
 
 }
-
 
 #comprar:hover{
 

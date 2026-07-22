@@ -59,9 +59,11 @@ ${produto.preco || "R$ 39,90"}
 
 
 
-<div class="status">
+<div class="status ${produto.status}">
 
-🟢 ${produto.status || "disponivel"}
+${produto.status === "disponivel" 
+? "🟢 Disponível" 
+: "🔴 Esgotado"}
 
 </div>
 
