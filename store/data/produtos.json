@@ -1,61 +1,80 @@
 [
   {
     "id": "mario",
+    "nfc": "RP-SNES-MARIO-001",
     "nome": "Mario Collection",
     "console": "Super Nintendo",
     "preco": "R$ 39,90",
     "banner": "../images/colecoes/mario/banner.jpg",
     "descricao": "Coleção completa do Mario para Super Nintendo.",
+    "estoque": 10,
+    "status": "disponivel",
+    "destaque": true,
     "whatsapp": "Olá! Tenho interesse no Cartucho NFC Mario Collection."
   },
-
   {
     "id": "zelda",
+    "nfc": "RP-SNES-ZELDA-001",
     "nome": "The Legend of Zelda",
     "console": "Super Nintendo",
     "preco": "R$ 39,90",
     "banner": "../images/colecoes/zelda/banner.jpg",
     "descricao": "Coleção The Legend of Zelda para Super Nintendo.",
+    "estoque": 10,
+    "status": "disponivel",
+    "destaque": true,
     "whatsapp": "Olá! Tenho interesse no Cartucho NFC Zelda."
   },
-
   {
     "id": "donkeykong",
+    "nfc": "RP-SNES-DONKEYKONG-001",
     "nome": "Donkey Kong Collection",
     "console": "Super Nintendo",
     "preco": "R$ 39,90",
     "banner": "../images/colecoes/donkeykong/banner.jpg",
     "descricao": "Coleção Donkey Kong Country para Super Nintendo.",
+    "estoque": 10,
+    "status": "disponivel",
+    "destaque": true,
     "whatsapp": "Olá! Tenho interesse no Cartucho NFC Donkey Kong."
   },
-
   {
     "id": "sonic",
+    "nfc": "RP-MD-SONIC-001",
     "nome": "Sonic Collection",
     "console": "Mega Drive",
     "preco": "R$ 39,90",
     "banner": "../images/colecoes/sonic/banner.jpg",
     "descricao": "Coleção Sonic para Mega Drive.",
+    "estoque": 10,
+    "status": "disponivel",
+    "destaque": true,
     "whatsapp": "Olá! Tenho interesse no Cartucho NFC Sonic."
   },
-
   {
     "id": "streetsofrage",
+    "nfc": "RP-MD-SOR-001",
     "nome": "Street of Rage Collection",
     "console": "Mega Drive",
     "preco": "R$ 39,90",
     "banner": "../images/colecoes/streetsofrage/banner.jpg",
     "descricao": "Coleção Street of Rage para Mega Drive.",
+    "estoque": 0,
+    "status": "esgotado",
+    "destaque": false,
     "whatsapp": "Olá! Tenho interesse no Cartucho NFC Street of Rage."
   },
-
   {
     "id": "pokemon",
+    "nfc": "RP-GBA-POKEMON-001",
     "nome": "Pokémon Collection",
     "console": "Game Boy Advance",
     "preco": "R$ 39,90",
     "banner": "../images/colecoes/pokemon/banner.jpg",
     "descricao": "Coleção Pokémon para Game Boy Advance.",
+    "estoque": 10,
+    "status": "disponivel",
+    "destaque": true,
     "whatsapp": "Olá! Tenho interesse no Cartucho NFC Pokémon."
   }
 ]

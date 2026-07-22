@@ -1,162 +1,113 @@
-[
-  {
-    "id": "mario",
+const params = new URLSearchParams(window.location.search);
 
-    "nfc": "RP-SNES-MARIO-001",
+const idProduto = params.get("id");
 
-    "nome": "Mario Collection",
 
-    "console": "Super Nintendo",
+if(!idProduto){
 
-    "preco": "R$ 49,90",
+    alert("Produto não encontrado");
 
-    "preco_antigo": "R$ 59,90",
+    throw new Error("ID do produto ausente");
 
-    "banner": "../images/colecoes/mario/banner.jpg",
+}
 
-    "descricao": "Coleção Mario para Super Nintendo com os maiores clássicos da franquia.",
 
-    "estoque": 10,
 
-    "destaque": true,
+fetch("data/produtos.json")
 
-    "status": "disponivel",
+.then(res => res.json())
 
-    "whatsapp": "Olá! Tenho interesse no Cartucho NFC Mario Collection."
-  },
+.then(produtos => {
 
 
-  {
-    "id": "zelda",
+    const produto = produtos.find(
+        item => item.id === idProduto
+    );
 
-    "nfc": "RP-SNES-ZELDA-001",
 
-    "nome": "The Legend of Zelda",
+    if(!produto){
 
-    "console": "Super Nintendo",
+        alert("Produto não existe");
 
-    "preco": "R$ 49,90",
+        throw new Error("Produto inválido");
 
-    "preco_antigo": "R$ 59,90",
+    }
 
-    "banner": "../images/colecoes/zelda/banner.jpg",
 
-    "descricao": "Coleção Zelda para Super Nintendo.",
 
-    "estoque": 10,
+    // Preenche informações na página
 
-    "destaque": true,
+    document.getElementById("produtoNome").innerHTML =
+    produto.nome;
 
-    "status": "disponivel",
 
-    "whatsapp": "Olá! Tenho interesse no Cartucho NFC Zelda."
-  },
+    document.getElementById("produtoConsole").innerHTML =
+    produto.console;
 
 
-  {
-    "id": "donkeykong",
+    document.getElementById("produtoDescricao").innerHTML =
+    produto.descricao;
 
-    "nfc": "RP-SNES-DONKEYKONG-001",
 
-    "nome": "Donkey Kong Collection",
 
-    "console": "Super Nintendo",
+    document.querySelector(".preco").innerHTML =
+    produto.preco;
 
-    "preco": "R$ 49,90",
 
-    "preco_antigo": "R$ 59,90",
 
-    "banner": "../images/colecoes/donkeykong/banner.jpg",
+    document.getElementById("produtoBanner").src =
+    produto.banner;
 
-    "descricao": "Coleção Donkey Kong Country para Super Nintendo.",
 
-    "estoque": 10,
 
-    "destaque": true,
+    // Botão WhatsApp
 
-    "status": "disponivel",
+    const botao =
+    document.getElementById("comprar");
 
-    "whatsapp": "Olá! Tenho interesse no Cartucho NFC Donkey Kong."
-  },
 
+    botao.onclick = function(){
 
-  {
-    "id": "sonic",
 
-    "nfc": "RP-MD-SONIC-001",
+        const mensagem = encodeURIComponent(
 
-    "nome": "Sonic Collection",
+            `Olá RetroPlay! 👋
+            
+Tenho interesse no Cartucho NFC:
 
-    "console": "Mega Drive",
+🎮 ${produto.nome}
 
-    "preco": "R$ 49,90",
+Console:
+${produto.console}
 
-    "preco_antigo": "R$ 59,90",
+Valor:
+${produto.preco}
 
-    "banner": "../images/colecoes/sonic/banner.jpg",
+Gostaria de realizar a compra.`
 
-    "descricao": "Coleção Sonic para Mega Drive.",
+        );
 
-    "estoque": 10,
 
-    "destaque": true,
+        // Substitua pelo seu número real (ex: "5511999999999")
+        const numero =
+        "5511meunumeroaqui";
 
-    "status": "disponivel",
 
-    "whatsapp": "Olá! Tenho interesse no Cartucho NFC Sonic."
-  },
+        window.open(
+            `https://wa.me/${numero}?text=${mensagem}`,
+            "_blank"
+        );
 
 
-  {
-    "id": "streetsofrage",
+    };
 
-    "nfc": "RP-MD-SOR-001",
 
-    "nome": "Street of Rage Collection",
+})
 
-    "console": "Mega Drive",
+.catch(error => {
 
-    "preco": "R$ 49,90",
 
-    "preco_antigo": "R$ 59,90",
+    console.error(error);
 
-    "banner": "../images/colecoes/streetsofrage/banner.jpg",
 
-    "descricao": "Coleção Street of Rage para Mega Drive.",
-
-    "estoque": 10,
-
-    "destaque": false,
-
-    "status": "disponivel",
-
-    "whatsapp": "Olá! Tenho interesse no Cartucho NFC Street of Rage."
-  },
-
-
-  {
-    "id": "pokemon",
-
-    "nfc": "RP-GBA-POKEMON-001",
-
-    "nome": "Pokémon Collection",
-
-    "console": "Game Boy Advance",
-
-    "preco": "R$ 49,90",
-
-    "preco_antigo": "R$ 59,90",
-
-    "banner": "../images/colecoes/pokemon/banner.jpg",
-
-    "descricao": "Coleção Pokémon para Game Boy Advance.",
-
-    "estoque": 10,
-
-    "destaque": true,
-
-    "status": "disponivel",
-
-    "whatsapp": "Olá! Tenho interesse no Cartucho NFC Pokémon."
-  }
-]
+});
