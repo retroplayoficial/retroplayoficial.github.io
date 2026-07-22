@@ -41,15 +41,17 @@ ${produto.destaque ?
 
 
 ${produto.preco_antigo ?
-`<span class="antigo">
+`
+<span class="antigo">
 ${produto.preco_antigo}
-</span>`
+</span>
+`
 :
 ''}
 
 
 <span class="preco">
-${produto.preco}
+${produto.preco || "R$ 39,90"}
 </span>
 
 
@@ -59,7 +61,7 @@ ${produto.preco}
 
 <div class="status">
 
-🟢 ${produto.status}
+🟢 ${produto.status || "disponivel"}
 
 </div>
 
