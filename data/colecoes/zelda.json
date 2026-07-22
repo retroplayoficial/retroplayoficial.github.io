@@ -1,0 +1,27 @@
+{
+  "id": "zelda",
+
+  "nome": "The Legend of Zelda",
+
+  "console": "Super Nintendo",
+
+  "consoleId": "snes",
+
+  "banner": "images/colecoes/zelda/banner.jpg",
+
+  "descricao": "A lendária aventura de Link no Super Nintendo.",
+
+  "jogos": [
+
+    {
+      "id": "alttp",
+
+      "nome": "The Legend of Zelda - A Link to the Past",
+
+      "rom": "TheLegendofZelda-ALinktothePast.sfc",
+
+      "capa": "images/colecoes/zelda/zelda.jpg"
+    }
+
+  ]
+}
