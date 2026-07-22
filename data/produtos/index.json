@@ -19,6 +19,44 @@
 
 
     {
+        "id":"RP-SNES-DONKEYKONG-001",
+
+        "produto":"Cartucho NFC",
+
+        "console":"Super Nintendo",
+
+        "colecao":"donkeykong",
+
+        "nome":"Donkey Kong Collection",
+
+        "descricao":"Super Nintendo - Donkey Kong Collection",
+
+        "link":"nfc.html?colecao=donkeykong",
+
+        "status":"disponivel"
+    },
+
+
+    {
+        "id":"RP-SNES-STREETFIGHTER-001",
+
+        "produto":"Cartucho NFC",
+
+        "console":"Super Nintendo",
+
+        "colecao":"streetfighter",
+
+        "nome":"Street Fighter Collection",
+
+        "descricao":"Super Nintendo - Street Fighter Collection",
+
+        "link":"nfc.html?colecao=streetfighter",
+
+        "status":"disponivel"
+    },
+
+
+    {
         "id":"RP-MD-SONIC-001",
 
         "produto":"Cartucho NFC",
@@ -50,7 +88,26 @@
 
         "descricao":"Mega Drive - Street of Rage Collection",
 
-        "link":"nfc.html?colecao=streetsofrage",
+        "link":"nfc.html?colecao=streetofrage",
+
+        "status":"disponivel"
+    },
+
+
+    {
+        "id":"RP-MD-MORTALKOMBAT-001",
+
+        "produto":"Cartucho NFC",
+
+        "console":"Mega Drive",
+
+        "colecao":"mortalkombat",
+
+        "nome":"Mortal Kombat Collection",
+
+        "descricao":"Mega Drive - Mortal Kombat Collection",
+
+        "link":"nfc.html?colecao=mortalkombat",
 
         "status":"disponivel"
     },
@@ -70,6 +127,44 @@
         "descricao":"Game Boy Advance - Pokémon Collection",
 
         "link":"nfc.html?colecao=pokemon",
+
+        "status":"disponivel"
+    },
+
+
+    {
+        "id":"RP-GBA-MARIOADVANCE-001",
+
+        "produto":"Cartucho NFC",
+
+        "console":"Game Boy Advance",
+
+        "colecao":"marioadvance",
+
+        "nome":"Mario Advance Collection",
+
+        "descricao":"Game Boy Advance - Mario Advance Collection",
+
+        "link":"nfc.html?colecao=marioadvance",
+
+        "status":"disponivel"
+    },
+
+
+    {
+        "id":"RP-GBA-DRAGONBALL-001",
+
+        "produto":"Cartucho NFC",
+
+        "console":"Game Boy Advance",
+
+        "colecao":"dragonball",
+
+        "nome":"Dragon Ball Collection",
+
+        "descricao":"Game Boy Advance - Dragon Ball Collection",
+
+        "link":"nfc.html?colecao=dragonball",
 
         "status":"disponivel"
     }
