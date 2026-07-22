@@ -183,7 +183,7 @@ section {
 /* PASSO 7 — Regras de Responsividade para Celulares e Tablets */
 
 /* ===========================
-   MOBILE
+   MOBILE GLOBAL
 =========================== */
 @media(max-width: 768px) {
     .banner-colecao {
@@ -364,12 +364,17 @@ section {
 }
 
 @media(max-width:600px){
+    .pagina-jogo{
+        margin:15px auto;
+    }
+
     .banner-jogo{
-        height:180px;
+        height:140px;
+        margin-bottom:15px;
     }
 
     .capa-jogo{
-        width:180px;
+        width:140px;
     }
 
     .dados-jogo h1{
@@ -382,11 +387,18 @@ section {
 
     .dados-jogo p{
         font-size:16px;
+        margin-bottom:15px;
     }
 
     .btn-jogar{
-        font-size:20px;
-        padding:16px;
+        font-size:18px;
+        padding:14px;
+        margin-bottom:12px;
+    }
+
+    .btn-voltar{
+        padding:12px;
+        font-size:16px;
     }
 }
 
