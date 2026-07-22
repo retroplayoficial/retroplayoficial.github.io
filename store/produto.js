@@ -1,114 +1,162 @@
-const params = new URLSearchParams(window.location.search);
+[
+  {
+    "id": "mario",
 
-const idProduto = params.get("id");
+    "nfc": "RP-SNES-MARIO-001",
 
+    "nome": "Mario Collection",
 
-if(!idProduto){
+    "console": "Super Nintendo",
 
-    alert("Produto não encontrado");
+    "preco": "R$ 49,90",
 
-    throw new Error("ID do produto ausente");
+    "preco_antigo": "R$ 59,90",
 
-}
+    "banner": "../images/colecoes/mario/banner.jpg",
 
+    "descricao": "Coleção Mario para Super Nintendo com os maiores clássicos da franquia.",
 
+    "estoque": 10,
 
-fetch("data/produtos.json")
+    "destaque": true,
 
-.then(res => res.json())
+    "status": "disponivel",
 
-.then(produtos => {
-
-
-    const produto = produtos.find(
-        item => item.id === idProduto
-    );
-
-
-    if(!produto){
-
-        alert("Produto não existe");
-
-        throw new Error("Produto inválido");
-
-    }
+    "whatsapp": "Olá! Tenho interesse no Cartucho NFC Mario Collection."
+  },
 
 
+  {
+    "id": "zelda",
 
-    // Preenche informações
+    "nfc": "RP-SNES-ZELDA-001",
 
-    document.getElementById("produtoNome").innerHTML =
-    produto.nome;
+    "nome": "The Legend of Zelda",
 
+    "console": "Super Nintendo",
 
-    document.getElementById("produtoConsole").innerHTML =
-    produto.console;
+    "preco": "R$ 49,90",
 
+    "preco_antigo": "R$ 59,90",
 
-    document.getElementById("produtoDescricao").innerHTML =
-    produto.descricao;
+    "banner": "../images/colecoes/zelda/banner.jpg",
 
+    "descricao": "Coleção Zelda para Super Nintendo.",
 
+    "estoque": 10,
 
-    document.querySelector(".preco").innerHTML =
-    produto.preco;
+    "destaque": true,
 
+    "status": "disponivel",
 
-
-    document.getElementById("produtoBanner").src =
-    produto.banner;
-
-
-
-    // Botão WhatsApp
-
-    const botao =
-    document.getElementById("comprar");
+    "whatsapp": "Olá! Tenho interesse no Cartucho NFC Zelda."
+  },
 
 
-    botao.onclick = function(){
+  {
+    "id": "donkeykong",
 
-        // Passo 2 — Melhorar a mensagem (Implementado)
-        const mensagem = encodeURIComponent(
+    "nfc": "RP-SNES-DONKEYKONG-001",
 
-            `Olá RetroPlay! 👋
-            
-            Tenho interesse no Cartucho NFC:
-            
-            🎮 ${produto.nome}
-            
-            Console:
-            ${produto.console}
-            
-            Valor:
-            ${produto.preco}
-            
-            Gostaria de realizar a compra.`
-            
-            );
+    "nome": "Donkey Kong Collection",
 
+    "console": "Super Nintendo",
 
-        // Passo 1 - Troque "55SEUNUMERO" pelo seu número real seguindo as regras
-        // Exemplo: "5511999999999" (sem +, sem espaço, sem parênteses)
-        const numero =
-        "55SEUNUMERO";
+    "preco": "R$ 49,90",
 
+    "preco_antigo": "R$ 59,90",
 
-        window.open(
-        `https://wa.me/${numero}?text=${mensagem}`,
-        "_blank"
-        );
+    "banner": "../images/colecoes/donkeykong/banner.jpg",
+
+    "descricao": "Coleção Donkey Kong Country para Super Nintendo.",
+
+    "estoque": 10,
+
+    "destaque": true,
+
+    "status": "disponivel",
+
+    "whatsapp": "Olá! Tenho interesse no Cartucho NFC Donkey Kong."
+  },
 
 
-    };
+  {
+    "id": "sonic",
+
+    "nfc": "RP-MD-SONIC-001",
+
+    "nome": "Sonic Collection",
+
+    "console": "Mega Drive",
+
+    "preco": "R$ 49,90",
+
+    "preco_antigo": "R$ 59,90",
+
+    "banner": "../images/colecoes/sonic/banner.jpg",
+
+    "descricao": "Coleção Sonic para Mega Drive.",
+
+    "estoque": 10,
+
+    "destaque": true,
+
+    "status": "disponivel",
+
+    "whatsapp": "Olá! Tenho interesse no Cartucho NFC Sonic."
+  },
 
 
-})
+  {
+    "id": "streetsofrage",
 
-.catch(error => {
+    "nfc": "RP-MD-SOR-001",
+
+    "nome": "Street of Rage Collection",
+
+    "console": "Mega Drive",
+
+    "preco": "R$ 49,90",
+
+    "preco_antigo": "R$ 59,90",
+
+    "banner": "../images/colecoes/streetsofrage/banner.jpg",
+
+    "descricao": "Coleção Street of Rage para Mega Drive.",
+
+    "estoque": 10,
+
+    "destaque": false,
+
+    "status": "disponivel",
+
+    "whatsapp": "Olá! Tenho interesse no Cartucho NFC Street of Rage."
+  },
 
 
-    console.error(error);
+  {
+    "id": "pokemon",
 
+    "nfc": "RP-GBA-POKEMON-001",
 
-});
+    "nome": "Pokémon Collection",
+
+    "console": "Game Boy Advance",
+
+    "preco": "R$ 49,90",
+
+    "preco_antigo": "R$ 59,90",
+
+    "banner": "../images/colecoes/pokemon/banner.jpg",
+
+    "descricao": "Coleção Pokémon para Game Boy Advance.",
+
+    "estoque": 10,
+
+    "destaque": true,
+
+    "status": "disponivel",
+
+    "whatsapp": "Olá! Tenho interesse no Cartucho NFC Pokémon."
+  }
+]
