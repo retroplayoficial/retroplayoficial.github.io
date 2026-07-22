@@ -1,0 +1,61 @@
+[
+  {
+    "id": "mario",
+    "nome": "Mario Collection",
+    "console": "Super Nintendo",
+    "preco": "R$ 39,90",
+    "banner": "../images/colecoes/mario/banner.jpg",
+    "descricao": "Coleção completa do Mario para Super Nintendo.",
+    "whatsapp": "Olá! Tenho interesse no Cartucho NFC Mario Collection."
+  },
+
+  {
+    "id": "zelda",
+    "nome": "The Legend of Zelda",
+    "console": "Super Nintendo",
+    "preco": "R$ 39,90",
+    "banner": "../images/colecoes/zelda/banner.jpg",
+    "descricao": "Coleção The Legend of Zelda para Super Nintendo.",
+    "whatsapp": "Olá! Tenho interesse no Cartucho NFC Zelda."
+  },
+
+  {
+    "id": "donkeykong",
+    "nome": "Donkey Kong Collection",
+    "console": "Super Nintendo",
+    "preco": "R$ 39,90",
+    "banner": "../images/colecoes/donkeykong/banner.jpg",
+    "descricao": "Coleção Donkey Kong Country para Super Nintendo.",
+    "whatsapp": "Olá! Tenho interesse no Cartucho NFC Donkey Kong."
+  },
+
+  {
+    "id": "sonic",
+    "nome": "Sonic Collection",
+    "console": "Mega Drive",
+    "preco": "R$ 39,90",
+    "banner": "../images/colecoes/sonic/banner.jpg",
+    "descricao": "Coleção Sonic para Mega Drive.",
+    "whatsapp": "Olá! Tenho interesse no Cartucho NFC Sonic."
+  },
+
+  {
+    "id": "streetsofrage",
+    "nome": "Street of Rage Collection",
+    "console": "Mega Drive",
+    "preco": "R$ 39,90",
+    "banner": "../images/colecoes/streetsofrage/banner.jpg",
+    "descricao": "Coleção Street of Rage para Mega Drive.",
+    "whatsapp": "Olá! Tenho interesse no Cartucho NFC Street of Rage."
+  },
+
+  {
+    "id": "pokemon",
+    "nome": "Pokémon Collection",
+    "console": "Game Boy Advance",
+    "preco": "R$ 39,90",
+    "banner": "../images/colecoes/pokemon/banner.jpg",
+    "descricao": "Coleção Pokémon para Game Boy Advance.",
+    "whatsapp": "Olá! Tenho interesse no Cartucho NFC Pokémon."
+  }
+]
