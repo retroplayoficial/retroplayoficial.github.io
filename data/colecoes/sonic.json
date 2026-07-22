@@ -28,7 +28,7 @@
 
       "nome": "Sonic The Hedgehog 2",
 
-      "rom": "sonic2.bin",
+      "rom": "Sonic2.smd",
 
       "capa": "images/colecoes/sonic/sonic2.jpg"
     },
@@ -38,7 +38,7 @@
 
       "nome": "Sonic The Hedgehog 3",
 
-      "rom": "sonic3.bin",
+      "rom": "Sonic3.smd",
 
       "capa": "images/colecoes/sonic/sonic3.jpg"
     },
@@ -48,7 +48,7 @@
 
       "nome": "Sonic & Knuckles",
 
-      "rom": "sonic-knuckles.bin",
+      "rom": "SonicandKnuckles.smd",
 
       "capa": "images/colecoes/sonic/sonic-knuckles.jpg"
     },
@@ -58,7 +58,7 @@
 
       "nome": "Sonic 3D Blast",
 
-      "rom": "sonic-3d-blast.bin",
+      "rom": "Sonic3dBlast.smd",
 
       "capa": "images/colecoes/sonic/sonic-3d-blast.jpg"
     }

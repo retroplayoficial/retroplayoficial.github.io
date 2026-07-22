@@ -27,30 +27,185 @@ document.addEventListener("DOMContentLoaded", () => {
 mostrarHome();
 
 function mostrarHome(){
+
     conteudo.innerHTML = `
-    <div class="hero">
-        <h2>RetroPlay Oficial</h2>
-        <p>Sua coleção retrô em um único lugar.</p>
-        <button onclick="abrirPagina('pages/colecoes.html')">Explorar Biblioteca</button>
-    </div>
-    <section class="container">
-        <h3 class="titulo">Escolha um Console</h3>
-        <div class="cards">
-            ${consoles.map(c=>`
-            <div class="card" data-console="${c.pagina}">
-                <div>
-                    <div style="font-size:64px">${c.emoji}</div>
-                    <h2>${c.nome}</h2>
-                </div>
-            </div>
-            `).join("")}
+
+    <section class="home-premium">
+
+
+        <div class="hero">
+
+
+            <h2>
+                🎮 RetroPlay Oficial
+            </h2>
+
+
+            <p>
+                Reviva os maiores clássicos dos videogames através dos Chaveiros Cartuchos NFC RetroPlay.
+            </p>
+
+
+            <button onclick="abrirPagina('pages/colecoes.html')">
+
+                Explorar Biblioteca
+
+            </button>
+
+
         </div>
+
+
+
+        <section class="consoles-home">
+
+
+            <h2>
+                Consoles Disponíveis
+            </h2>
+
+
+            <div class="cards-home">
+
+
+                <div class="console-card" data-console="snes">
+
+                    <img 
+                    src="images/consoles/snes.jpg"
+                    class="imagem-console">
+
+                    <h3>
+                        Super Nintendo
+                    </h3>
+
+                    <p>
+                        Clássicos da era 16 bits.
+                    </p>
+
+                </div>
+
+
+
+                <div class="console-card" data-console="megadrive">
+
+                    <img 
+                    src="images/consoles/megadrive.jpg"
+                    class="imagem-console">
+
+                    <h3>
+                        Mega Drive
+                    </h3>
+
+                    <p>
+                        Os grandes sucessos da SEGA.
+                    </p>
+
+                </div>
+
+
+
+                <div class="console-card" data-console="gba">
+
+                    <img 
+                    src="images/consoles/gba.jpg"
+                    class="imagem-console">
+
+                    <h3>
+                        Game Boy Advance
+                    </h3>
+
+                    <p>
+                        A nostalgia portátil da Nintendo.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <section class="como-funciona">
+
+
+            <h2>
+                Como Funciona
+            </h2>
+
+
+            <div class="passos">
+
+
+                <div class="passo">
+
+                    <span>①</span>
+
+                    <p>
+                    Escolha seu ChaveiroCartucho NFC.
+                    </p>
+
+                </div>
+
+
+
+                <div class="passo">
+
+                    <span>②</span>
+
+                    <p>
+                    Encoste o celular no Chaveiro Cartucho.
+                    </p>
+
+                </div>
+
+
+
+                <div class="passo">
+
+                    <span>③</span>
+
+                    <p>
+                    Sua coleção abre automaticamente.
+                    </p>
+
+                </div>
+
+
+
+                <div class="passo">
+
+                    <span>④</span>
+
+                    <p>
+                    Escolha o jogo e aproveite.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
     </section>
+
     `;
 
-    document.querySelectorAll(".card").forEach(card=>{
-        card.onclick=()=>abrirConsole(card.dataset.console);
+    document.querySelectorAll(".console-card").forEach(card=>{
+
+        card.onclick = ()=>{
+
+            abrirConsole(card.dataset.console);
+
+        };
+
     });
+
 }
 
 // Função genérica para carregar páginas HTML dinamicamente

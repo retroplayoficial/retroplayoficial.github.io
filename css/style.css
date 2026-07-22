@@ -318,4 +318,427 @@ section {
     color:#fff;
 
 }
+/* ========================= */
+/* PÁGINA DA COLEÇÃO PREMIUM */
+/* ========================= */
 
+.pagina-colecao{
+
+    width:100%;
+    max-width:1400px;
+    margin:auto;
+    padding:20px;
+
+}
+
+.banner-colecao{
+
+    width:100%;
+    height:280px;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.45);
+
+}
+
+.banner-colecao img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.info-colecao{
+
+    margin-bottom:30px;
+
+}
+
+.info-colecao h1{
+
+    color:white;
+
+    font-size:42px;
+
+    margin-bottom:10px;
+
+}
+
+.info-colecao h3{
+
+    color:#FFD54A;
+
+    margin-bottom:15px;
+
+}
+
+.info-colecao p{
+
+    color:#cfcfcf;
+
+    max-width:900px;
+
+    line-height:1.7;
+
+}
+
+/* GRID DOS JOGOS */
+
+.cards-jogos{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.card-jogo{
+
+    background:#1d1d1d;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.card-jogo:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 12px 35px rgba(0,0,0,.5);
+
+}
+
+.card-jogo img{
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+
+}
+
+.card-jogo h2{
+
+    color:white;
+
+    font-size:18px;
+
+    text-align:center;
+
+    padding:15px;
+
+}
+
+/* ================================= */
+/* HOME INSTITUCIONAL RETROPLAY      */
+/* ================================= */
+
+
+.home-premium{
+
+    width:100%;
+    max-width:1400px;
+    margin:auto;
+    padding:30px;
+
+}
+
+
+
+/* HERO */
+
+.hero{
+
+    text-align:center;
+
+    padding:80px 20px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.85)
+    ),
+    url("../images/banners/home.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.5);
+
+}
+
+
+
+.hero h1{
+
+    font-size:55px;
+
+    color:white;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.hero p{
+
+    font-size:22px;
+
+    color:#ddd;
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.6;
+
+}
+
+
+
+.hero button{
+
+    margin-top:30px;
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#ffcc00;
+
+    color:#111;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.hero button:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* CONSOLES */
+
+
+.consoles-home{
+
+    margin-top:60px;
+
+    text-align:center;
+
+}
+
+
+
+.consoles-home h2{
+
+    color:white;
+
+    font-size:35px;
+
+}
+
+
+
+.cards-home{
+
+    margin-top:35px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.console-card{
+
+    background:#171717;
+
+    padding:35px 20px;
+
+    border-radius:20px;
+
+    color:white;
+
+    transition:.3s;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.35);
+
+}
+
+
+
+.console-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.icone-console{
+
+    font-size:55px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.console-card h3{
+
+    font-size:25px;
+
+    color:#ffcc00;
+
+}
+
+
+
+.console-card p{
+
+    color:#ccc;
+
+}
+
+
+
+/* COMO FUNCIONA */
+
+
+.como-funciona{
+
+    margin-top:70px;
+
+    text-align:center;
+
+}
+
+
+
+.como-funciona h2{
+
+    color:white;
+
+    font-size:35px;
+
+}
+
+
+
+.passos{
+
+    margin-top:35px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+.passo{
+
+    background:#111;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    color:white;
+
+}
+
+
+
+.passo span{
+
+    font-size:40px;
+
+    color:#ffcc00;
+
+}
+
+
+
+.passo p{
+
+    color:#ddd;
+
+}
+.imagem-console{
+
+    width:100%;
+
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    display:block;
+
+}
+
+
+.console-card{
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.console-card:hover{
+
+    transform:translateY(-8px);
+
+}

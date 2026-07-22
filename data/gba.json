@@ -1,0 +1,17 @@
+{
+    "console": "Game Boy Advance",
+
+    "colecoes": [
+
+        {
+            "id": "pokemon",
+
+            "nome": "Pokémon Collection",
+
+            "arquivo": "pokemon.json",
+
+            "banner": "images/colecoes/pokemon/banner.jpg"
+        }
+
+    ]
+}
