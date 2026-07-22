@@ -68,13 +68,28 @@ fetch("data/produtos.json")
 
     botao.onclick = function(){
 
+        // Passo 2 — Melhorar a mensagem (Implementado)
+        const mensagem = encodeURIComponent(
 
-        const mensagem =
-        encodeURIComponent(produto.whatsapp);
+            `Olá RetroPlay! 👋
+            
+            Tenho interesse no Cartucho NFC:
+            
+            🎮 ${produto.nome}
+            
+            Console:
+            ${produto.console}
+            
+            Valor:
+            ${produto.preco}
+            
+            Gostaria de realizar a compra.`
+            
+            );
 
 
-        // COLOQUE SEU WHATSAPP AQUI
-
+        // Passo 1 - Troque "55SEUNUMERO" pelo seu número real seguindo as regras
+        // Exemplo: "5511999999999" (sem +, sem espaço, sem parênteses)
         const numero =
         "55SEUNUMERO";
 

@@ -1,33 +1,50 @@
-const botoes = document.querySelectorAll(".card button");
+fetch("data/produtos.json")
 
-const mensagens = [
+.then(res => res.json())
 
-"Olá! Tenho interesse no Cartucho NFC Mario Collection.",
+.then(produtos => {
 
-"Olá! Tenho interesse no Cartucho NFC The Legend of Zelda.",
 
-"Olá! Tenho interesse no Cartucho NFC Donkey Kong Collection.",
+const grid = document.querySelector(".grid");
 
-"Olá! Tenho interesse no Cartucho NFC Sonic Collection.",
 
-"Olá! Tenho interesse no Cartucho NFC Street of Rage Collection.",
+grid.innerHTML = "";
 
-"Olá! Tenho interesse no Cartucho NFC Pokémon Collection."
 
-];
+produtos.forEach(produto => {
 
-// COLOQUE AQUI O SEU NÚMERO
 
-const numero = "5511989513560";
+grid.innerHTML += `
 
-botoes.forEach((botao,index)=>{
 
-botao.addEventListener("click",()=>{
+<div class="card">
 
-const texto = encodeURIComponent(mensagens[index]);
 
-window.open(`https://wa.me/${numero}?text=${texto}`,"_blank");
+<img src="${produto.banner}">
+
+
+<h3>${produto.nome}</h3>
+
+
+<p>${produto.console}</p>
+
+
+<a 
+href="produto.html?id=${produto.id}" 
+class="btn-produto">
+
+Ver Produto
+
+</a>
+
+
+</div>
+
+
+`;
+
 
 });
+
 
 });

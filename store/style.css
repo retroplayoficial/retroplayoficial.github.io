@@ -671,3 +671,106 @@ height:220px;
 }
 
 }
+/* =======================
+BOTAO PRODUTO
+======================= */
+
+
+.btn-produto{
+
+display:inline-block;
+
+margin:0 15px 20px;
+
+padding:15px;
+
+background:#ff6a00;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:12px;
+
+font-weight:bold;
+
+text-align:center;
+
+transition:.3s;
+
+}
+
+
+.btn-produto:hover{
+
+background:#ff8b2b;
+
+transform:scale(1.05);
+
+}
+/* =======================
+RODAPÉ
+======================= */
+
+
+.rodape{
+
+background:#050505;
+
+padding:60px 40px 20px;
+
+border-top:2px solid #ff6a00;
+
+}
+
+
+.rodape-conteudo{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:40px;
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+
+.rodape h3{
+
+color:#ff6a00;
+
+font-size:24px;
+
+margin-bottom:15px;
+
+}
+
+
+.rodape p{
+
+color:#ccc;
+
+line-height:1.7;
+
+}
+
+
+.copyright{
+
+text-align:center;
+
+margin-top:40px;
+
+padding-top:20px;
+
+border-top:1px solid #222;
+
+color:#777;
+
+font-size:14px;
+
+}
