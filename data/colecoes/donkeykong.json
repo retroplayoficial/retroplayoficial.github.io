@@ -1,0 +1,47 @@
+{
+  "id": "donkeykong",
+
+  "nome": "Donkey Kong Collection",
+
+  "console": "Super Nintendo",
+
+  "consoleId": "snes",
+
+  "banner": "images/colecoes/donkeykong/banner.jpg",
+
+  "descricao": "Os maiores clássicos de Donkey Kong Country para Super Nintendo.",
+
+  "jogos": [
+
+    {
+      "id": "dk1",
+
+      "nome": "Donkey Kong Country",
+
+      "rom": "Donkey-Kong-Country.sfc",
+
+      "capa": "images/colecoes/donkeykong/dk1.jpg"
+    },
+
+    {
+      "id": "dk2",
+
+      "nome": "Donkey Kong Country 2",
+
+      "rom": "Donkey-Kong-Country2.smc",
+
+      "capa": "images/colecoes/donkeykong/dk2.jpg"
+    },
+
+    {
+      "id": "dk3",
+
+      "nome": "Donkey Kong Country 3",
+
+      "rom": "donkeykong/Donkey-Kong-Country3.smc",
+
+      "capa": "images/colecoes/donkeykong/dk3.jpg"
+    }
+
+  ]
+}
