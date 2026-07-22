@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RetroPlay NFC</title>
+
+
+<link rel="stylesheet" href="css/style.css">
+
+
+<style>
+
+body{
+
+    margin:0;
+
+    background:#050505;
+
+    color:white;
+
+}
+
+
+.nfc-header{
+
+    text-align:center;
+
+    padding:25px;
+
+}
+
+
+.nfc-header h1{
+
+    font-size:38px;
+
+    margin:0;
+
+}
+
+
+.nfc-header p{
+
+    color:#aaa;
+
+    font-size:18px;
+
+}
+
+
+
+.nfc-loading{
+
+    height:70vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+}
+
+
+.nfc-loading span{
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.nfc-loading h2{
+
+    color:#aaa;
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<header class="nfc-header">
+
+
+<h1>
+🎮 RetroPlay NFC
+</h1>
+
+
+<p>
+Sua coleção retrô está pronta.
+</p>
+
+
+</header>
+
+
+
+<main id="conteudo">
+
+
+<div class="nfc-loading">
+
+
+<span>
+📲
+</span>
+
+
+<h2>
+Carregando coleção...
+</h2>
+
+
+</div>
+
+
+</main>
+
+
+
+
+
+<script src="js/app.js"></script>
+
+
+
+<script>
+
+
+const params = new URLSearchParams(window.location.search);
+
+
+
+const colecao = params.get("colecao");
+
+
+
+if(colecao){
+
+
+    abrirJogos(colecao);
+
+
+}
+
+else{
+
+
+document.getElementById("conteudo").innerHTML = `
+
+
+<div class="nfc-loading">
+
+
+<span>
+⚠️
+</span>
+
+
+<h2>
+Coleção NFC não encontrada.
+</h2>
+
+
+</div>
+
+
+`;
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+
+</html>

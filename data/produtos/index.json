@@ -1,0 +1,76 @@
+[
+    {
+        "id":"RP-SNES-MARIO-001",
+
+        "produto":"Cartucho NFC",
+
+        "console":"Super Nintendo",
+
+        "colecao":"mario",
+
+        "nome":"Mario Collection",
+
+        "descricao":"Super Nintendo - Mario Collection",
+
+        "link":"nfc.html?colecao=mario",
+
+        "status":"disponivel"
+    },
+
+
+    {
+        "id":"RP-MD-SONIC-001",
+
+        "produto":"Cartucho NFC",
+
+        "console":"Mega Drive",
+
+        "colecao":"sonic",
+
+        "nome":"Sonic Collection",
+
+        "descricao":"Mega Drive - Sonic Collection",
+
+        "link":"nfc.html?colecao=sonic",
+
+        "status":"disponivel"
+    },
+
+
+    {
+        "id":"RP-MD-SOR-001",
+
+        "produto":"Cartucho NFC",
+
+        "console":"Mega Drive",
+
+        "colecao":"streetofrage",
+
+        "nome":"Street of Rage Collection",
+
+        "descricao":"Mega Drive - Street of Rage Collection",
+
+        "link":"nfc.html?colecao=streetsofrage",
+
+        "status":"disponivel"
+    },
+
+
+    {
+        "id":"RP-GBA-POKEMON-001",
+
+        "produto":"Cartucho NFC",
+
+        "console":"Game Boy Advance",
+
+        "colecao":"pokemon",
+
+        "nome":"Pokémon Collection",
+
+        "descricao":"Game Boy Advance - Pokémon Collection",
+
+        "link":"nfc.html?colecao=pokemon",
+
+        "status":"disponivel"
+    }
+]

@@ -742,3 +742,97 @@ section {
     transform:translateY(-8px);
 
 }
+/* Página Premium dos Consoles */
+
+.console-page{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+
+
+.banner-console{
+
+    width:100%;
+
+    height:350px;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.banner-console img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+.console-actions{
+
+    display:flex;
+
+    gap:20px;
+
+    margin:30px 0;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.console-actions button{
+
+    padding:14px 25px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#222;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.console-actions button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+
+.btn-comprar{
+
+    background:#00c853 !important;
+
+    color:#000 !important;
+
+    font-weight:bold;
+
+}

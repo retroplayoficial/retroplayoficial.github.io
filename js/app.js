@@ -200,7 +200,7 @@ function mostrarHome(){
 
         card.onclick = ()=>{
 
-            abrirConsole(card.dataset.console);
+            abrirConsolePremium(card.dataset.console);
 
         };
 
@@ -424,5 +424,102 @@ function jogar(console, colecao, rom){
 
     window.location.href =
     `emulator/index.html?rom=${console}/${colecao}/${rom}`;
+
+}
+
+async function abrirConsolePremium(consoleSelecionado){
+
+
+    let pagina = "";
+
+
+    if(consoleSelecionado === "snes"){
+
+        pagina = "pages/consoles/snes.html";
+
+    }
+
+
+    if(consoleSelecionado === "megadrive"){
+
+        pagina = "pages/consoles/megadrive.html";
+
+    }
+
+
+    if(consoleSelecionado === "gba"){
+
+        pagina = "pages/consoles/gba.html";
+
+    }
+
+
+
+    const resposta = await fetch(pagina);
+
+
+    conteudo.innerHTML = await resposta.text();
+
+
+
+    carregarColecoesConsole(consoleSelecionado);
+
+
+}
+
+async function carregarColecoesConsole(consoleSelecionado){
+
+
+    const resposta = await fetch(`data/${consoleSelecionado}.json`);
+
+    const dados = await resposta.json();
+
+
+
+    const lista = document.getElementById("listaColecoesConsole");
+
+
+
+    if(!lista) return;
+
+
+
+    lista.innerHTML = "";
+
+
+
+    dados.colecoes.forEach(c=>{
+
+
+        lista.innerHTML += `
+
+
+        <div class="card-colecao"
+        onclick="abrirJogos('${c.id}')">
+
+
+            <img 
+            src="${c.banner}"
+            style="
+            width:100%;
+            height:180px;
+            object-fit:cover;
+            border-radius:15px;
+            ">
+
+
+            <h2>
+            ${c.nome}
+            </h2>
+
+
+        </div>
+
+
+        `;
+
+
+    });
+
 
 }
