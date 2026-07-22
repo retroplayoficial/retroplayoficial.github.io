@@ -1,73 +1,52 @@
 {
     "id": "pokemon",
-
     "nome": "Pokémon Collection",
-
     "descricao": "Os maiores clássicos Pokémon do Game Boy Advance reunidos em uma única coleção.",
-
     "banner": "images/colecoes/pokemon/banner.jpg",
-
     "console": "Game Boy Advance",
-
     "consoleId": "gba",
-
     "jogos": [
-
         {
             "id": "firered",
             "nome": "Pokémon FireRed",
             "rom": "pokemon-firered.gba",
             "capa": "images/colecoes/pokemon/jogos/firered.jpg"
         },
-
         {
             "id": "leafgreen",
             "nome": "Pokémon LeafGreen",
             "rom": "pokemon-leafgreen.gba",
             "capa": "images/colecoes/pokemon/jogos/leafgreen.jpg"
         },
-
         {
             "id": "ruby",
             "nome": "Pokémon Ruby",
             "rom": "pokemon-ruby.gba",
             "capa": "images/colecoes/pokemon/jogos/ruby.jpg"
         },
-
         {
             "id": "sapphire",
             "nome": "Pokémon Sapphire",
             "rom": "pokemon-sapphire.gba",
             "capa": "images/colecoes/pokemon/jogos/sapphire.jpg"
         },
-
         {
             "id": "emerald",
             "nome": "Pokémon Emerald",
             "rom": "pokemon-emerald.gba",
             "capa": "images/colecoes/pokemon/jogos/emerald.jpg"
         },
-
         {
             "id": "mysterydungeon",
             "nome": "Pokémon Mystery Dungeon Red Rescue Team",
             "rom": "pokemon-mystery-dungeon-red.gba",
             "capa": "images/colecoes/pokemon/jogos/mysterydungeon.jpg"
         },
-
         {
             "id": "pinball",
             "nome": "Pokémon Pinball Ruby & Sapphire",
             "rom": "pokemon-pinball-ruby-sapphire.gba",
             "capa": "images/colecoes/pokemon/jogos/pinball.jpg"
-        },
-
-        {
-            "id": "tradingcard",
-            "nome": "Pokémon Trading Card Game",
-            "rom": "pokemon-trading-card-game.gba",
-            "capa": "images/colecoes/pokemon/jogos/tradingcard.jpg"
         }
-
     ]
 }
