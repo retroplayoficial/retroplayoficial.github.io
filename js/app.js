@@ -46,13 +46,6 @@ function mostrarHome(){
             </p>
 
 
-            <button onclick="abrirPagina('pages/colecoes.html')">
-
-                Explorar Biblioteca
-
-            </button>
-
-
         </div>
 
 
