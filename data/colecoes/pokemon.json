@@ -31,6 +31,18 @@
             "capa": "images/colecoes/pokemon/jogos/sapphire.jpg"
         },
         {
+            "id": "yellow",
+            "nome": "Pokémon Yellow",
+            "rom": "pokemon-yellow.gb",
+            "capa": "images/colecoes/pokemon/jogos/yellow.jpg"
+        },
+        {
+            "id": "yellow2",
+            "nome": "Pokémon Lightning Yellow",
+            "rom": "Pokemon-Lightning-Yellow.gba",
+            "capa": "images/colecoes/pokemon/jogos/yellow2.jpg"
+        },
+        {
             "id": "emerald",
             "nome": "Pokémon Emerald",
             "rom": "pokemon-emerald.gba",
