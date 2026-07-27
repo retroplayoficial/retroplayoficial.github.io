@@ -76,5 +76,18 @@
     "status": "disponivel",
     "destaque": true,
     "whatsapp": "Olá! Tenho interesse no Cartucho NFC Pokémon."
+  },
+  {
+    "id": "streetfighter",
+    "nfc": "RP-SNES-STREETFIGHTER-001",
+    "nome": "Street Fighter Collection",
+    "console": "Super Nintendo",
+    "preco": "R$ 39,90",
+    "banner": "../images/colecoes/streetfightercollection/banner.jpg",
+    "descricao": "Coleção Street Fighter para Super Nintendo.",
+    "estoque": 10,
+    "status": "disponivel",
+    "destaque": true,
+    "whatsapp": "Olá! Tenho interesse no Cartucho NFC Street Fighter Collection."
   }
 ]
