@@ -90,7 +90,7 @@ Gostaria de realizar a compra.`
 
         // Substitua pelo seu número real (ex: "5511999999999")
         const numero =
-        "5511meunumeroaqui";
+        "5511989513560";
 
 
         window.open(
