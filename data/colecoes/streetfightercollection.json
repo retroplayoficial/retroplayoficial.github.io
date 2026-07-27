@@ -1,0 +1,43 @@
+{
+  "id": "streetfighter",
+
+  "nome": "Street Fighter Collection",
+
+  "descricao": "Os maiores clássicos de Street Fighter reunidos em uma única coleção.",
+
+  "banner": "images/colecoes/streetfightercollection/banner2.jpg",
+
+  "console": "Super Nintendo",
+
+  "consoleId": "snes",
+
+  "jogos": [
+    {
+      "id": "sf2",
+      "nome": "Street Fighter II",
+      "rom": "street-fighter-ii.smc",
+      "capa": "images/colecoes/streetfightercollection/jogos/street-fighter-ii.jpg"
+    },
+
+    {
+      "id": "sf2t",
+      "nome": "Street Fighter II Turbo World Warrior",
+      "rom": "street-fighter-ii-turbo.smc",
+      "capa": "images/colecoes/streetfightercollection/jogos/street-fighter-ii-turbo.jpg"
+    },
+
+    {
+      "id": "ssf2",
+      "nome": "Super Street Fighter II",
+      "rom": "super-street-fighter-ii.smc",
+      "capa": "images/colecoes/streetfightercollection/jogos/super-street-fighter-ii.jpg"
+    },
+
+    {
+      "id": "ssf2t",
+      "nome": "Super Street Fighter II Turbo hyper Fighting",
+      "rom": "super-street-fighter-ii-turbo.smc",
+      "capa": "images/colecoes/streetfightercollection/jogos/super-street-fighter-ii-turbo.jpg"
+    }
+  ]
+}

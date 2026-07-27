@@ -1,8 +1,6 @@
 {
   "console": "Super Nintendo",
-
   "colecoes": [
-
     {
       "id": "mario",
       "nome": "Mario Collection",
@@ -10,7 +8,6 @@
       "logo": "images/colecoes/mario/logo.jpg",
       "cover": "images/colecoes/mario/cover.jpg"
     },
-
     {
       "id": "zelda",
       "nome": "Zelda",
@@ -18,7 +15,6 @@
       "logo": "images/colecoes/zelda/logo.jpg",
       "cover": "images/colecoes/zelda/cover.jpg"
     },
-
     {
       "id": "donkeykong",
       "nome": "Donkey Kong Collection",
@@ -26,14 +22,19 @@
       "logo": "images/colecoes/donkeykong/logo.jpg",
       "cover": "images/colecoes/donkeykong/cover.jpg"
     },
-
     {
       "id": "megamanx",
       "nome": "Mega Man X Collection",
       "banner": "images/colecoes/megamanx/banner.jpg",
       "logo": "images/colecoes/megamanx/logo.jpg",
       "cover": "images/colecoes/megamanx/cover.jpg"
+    },
+    {
+      "id": "streetfightercollection",
+      "nome": "Street Fighter Collection",
+      "banner": "images/colecoes/streetfightercollection/banner.jpg",
+      "logo": "images/colecoes/streetfightercollection/logo.jpg",
+      "cover": "images/colecoes/streetfightercollection/cover.jpg"
     }
-
   ]
 }
