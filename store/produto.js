@@ -2,8 +2,7 @@ const params = new URLSearchParams(window.location.search);
 
 const idProduto = params.get("id");
 
-
-if(!idProduto){
+if (!idProduto) {
 
     alert("Produto não encontrado");
 
@@ -11,21 +10,18 @@ if(!idProduto){
 
 }
 
-
-
 fetch("data/produtos.json")
 
 .then(res => res.json())
 
 .then(produtos => {
 
-
     const produto = produtos.find(
         item => item.id === idProduto
     );
 
 
-    if(!produto){
+    if (!produto) {
 
         alert("Produto não existe");
 
@@ -34,63 +30,66 @@ fetch("data/produtos.json")
     }
 
 
-
     // Preenche informações na página
 
     document.getElementById("produtoNome").innerHTML =
-    produto.nome;
+        produto.nome;
 
 
     document.getElementById("produtoConsole").innerHTML =
-    produto.console;
+        produto.console;
 
 
     document.getElementById("produtoDescricao").innerHTML =
-    produto.descricao;
-
+        produto.descricao;
 
 
     document.querySelector(".preco").innerHTML =
-    produto.preco;
-
+        produto.preco;
 
 
     document.getElementById("produtoBanner").src =
-    produto.banner;
-
+        produto.banner;
 
 
     // Botão WhatsApp
 
     const botao =
-    document.getElementById("comprar");
+        document.getElementById("comprar");
 
 
-    botao.onclick = function(){
+    botao.onclick = function() {
 
 
         const mensagem = encodeURIComponent(
 
-            `Olá RetroPlay! 👋
-            
-Tenho interesse no Cartucho NFC:
+`Olá RetroPlay! 👋
+
+Tenho interesse em comprar:
 
 🎮 ${produto.nome}
 
-Console:
+🎮 Console:
 ${produto.console}
 
-Valor:
+💰 Valor:
 ${produto.preco}
 
-Gostaria de realizar a compra.`
+Gostaria de finalizar minha compra.
+
+📦 Meu CEP:
+____________________
+
+🚚 Gostaria de consultar o valor do frete e o total do pedido.
+
+Obrigado! 😊`
 
         );
 
 
-        // Substitua pelo seu número real (ex: "5511999999999")
+        // Número oficial da RetroPlay
         const numero =
-        "5511976467560";
+            "5511976467560";
 
 
         window.open(
@@ -101,13 +100,10 @@ Gostaria de realizar a compra.`
 
     };
 
-
 })
 
 .catch(error => {
 
-
     console.error(error);
-
 
 });
