@@ -1,0 +1,28 @@
+{
+  "id": "mortalkombat",
+  "nome": "Mortal Kombat Collection",
+  "console": "Super Nintendo",
+  "consoleId": "snes",
+  "banner": "images/colecoes/mortalkombat/banner.jpg",
+  "descricao": "Os maiores clássicos de Mortal Kombat para Super Nintendo.",
+  "jogos": [
+    {
+      "id": "mk1",
+      "nome": "Mortal Kombat",
+      "rom": "Mortal-Kombat.smc",
+      "capa": "images/colecoes/mortalkombat/mk1.jpg"
+    },
+    {
+      "id": "mk2",
+      "nome": "Mortal Kombat II",
+      "rom": "Mortal-Kombat-II.smc",
+      "capa": "images/colecoes/mortalkombat/mk2.jpg"
+    },
+    {
+      "id": "umk3",
+      "nome": "Ultimate Mortal Kombat 3",
+      "rom": "Ultimate-Mortal-Kombat-3.smc",
+      "capa": "images/colecoes/mortalkombat/umk3.jpg"
+    }
+  ]
+}
