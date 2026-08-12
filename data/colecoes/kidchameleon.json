@@ -1,0 +1,27 @@
+{
+  "id": "kidchameleon",
+
+  "nome": "Kid Chameleon Collection",
+
+  "console": "Mega Drive",
+
+  "consoleId": "megadrive",
+
+  "banner": "images/colecoes/kidchameleon/banner.jpg",
+
+  "descricao": "Os maiores clássicos do Kid Chameleon para Mega Drive.",
+
+  "jogos": [
+
+    {
+      "id": "kidchameleon",
+
+      "nome": "Kid Chameleon",
+
+      "rom": "KidChameleon.smd",
+
+      "capa": "images/colecoes/kidchameleon/kidchameleon.jpg"
+    }
+
+  ]
+}

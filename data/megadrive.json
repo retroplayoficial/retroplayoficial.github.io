@@ -16,18 +16,18 @@
       "cover": "images/colecoes/streetsofrage/cover.jpg"
     },
     {
-      "id": "goldenaxe",
-      "nome": "Golden Axe",
-      "banner": "images/colecoes/goldenaxe/banner.jpg",
-      "logo": "images/colecoes/goldenaxe/logo.jpg",
-      "cover": "images/colecoes/goldenaxe/cover.jpg"
+      "id": "decap attack",
+      "nome": "Decap Attack",
+      "banner": "images/colecoes/decapattack/banner.jpg",
+      "logo": "images/colecoes/decapattack/logo.jpg",
+      "cover": "images/colecoes/decapattack/cover.jpg"
     },
     {
-      "id": "shinobi",
-      "nome": "Shinobi Collection",
-      "banner": "images/colecoes/shinobi/banner.jpg",
-      "logo": "images/colecoes/shinobi/logo.jpg",
-      "cover": "images/colecoes/shinobi/cover.jpg"
+      "id": "kid chameleon",
+      "nome": "Kid Chameleon",
+      "banner": "images/colecoes/kidchameleon/banner.jpg",
+      "logo": "images/colecoes/kidchameleon/logo.jpg",
+      "cover": "images/colecoes/kidchameleon/cover.jpg"
     }
   ]
 }
