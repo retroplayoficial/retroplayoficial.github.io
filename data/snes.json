@@ -35,6 +35,27 @@
       "banner": "images/colecoes/streetfightercollection/banner.jpg",
       "logo": "images/colecoes/streetfightercollection/logo.jpg",
       "cover": "images/colecoes/streetfightercollection/cover.jpg"
+    },
+    {
+      "id": "supermetroid",
+      "nome": "Super Metroid Collection",
+      "banner": "images/colecoes/supermetroid/banner.jpg",
+      "logo": "images/colecoes/supermetroid/logo.jpg",
+      "cover": "images/colecoes/supermetroid/cover.jpg"
+    },
+    {
+      "id": "chronotrigger",
+      "nome": "Chrono Trigger Collection",
+      "banner": "images/colecoes/chronotrigger/banner.jpg",
+      "logo": "images/colecoes/chronotrigger/logo.jpg",
+      "cover": "images/colecoes/chronotrigger/cover.jpg"
+    },
+    {
+      "id": "mortalkombat",
+      "nome": "Mortal Kombat Collection",
+      "banner": "images/colecoes/mortalkombat/banner.jpg",
+      "logo": "images/colecoes/mortalkombat/logo.jpg",
+      "cover": "images/colecoes/mortalkombat/cover.jpg"
     }
   ]
 }

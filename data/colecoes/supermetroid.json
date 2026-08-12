@@ -1,0 +1,16 @@
+{
+  "id": "supermetroid",
+  "nome": "Super Metroid",
+  "console": "Super Nintendo",
+  "consoleId": "snes",
+  "banner": "images/colecoes/supermetroid/banner.jpg",
+  "descricao": "A clássica aventura de Samus Aran no Super Nintendo.",
+  "jogos": [
+    {
+      "id": "supermetroid",
+      "nome": "Super Metroid",
+      "rom": "SuperMetroid.smc",
+      "capa": "images/colecoes/supermetroid/supermetroid.jpg"
+    }
+  ]
+}

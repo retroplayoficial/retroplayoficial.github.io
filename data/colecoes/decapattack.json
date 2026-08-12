@@ -1,0 +1,16 @@
+{
+  "id": "decapattack",
+  "nome": "Decap Attack Collection",
+  "console": "Mega Drive",
+  "consoleId": "megadrive",
+  "banner": "images/colecoes/decapattack/banner.jpg",
+  "descricao": "Os maiores clássicos do Decap Attack para Mega Drive.",
+  "jogos": [
+    {
+      "id": "decapattack",
+      "nome": "Decap Attack",
+      "rom": "DecapAttack.smd",
+      "capa": "images/colecoes/decapattack/decapattack.jpg"
+    }
+  ]
+}

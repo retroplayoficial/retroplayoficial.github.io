@@ -1,0 +1,16 @@
+{
+  "id": "chronotrigger",
+  "nome": "Chrono Trigger",
+  "console": "Super Nintendo",
+  "consoleId": "snes",
+  "banner": "images/colecoes/chronotrigger/banner.jpg",
+  "descricao": "A lendária aventura de viagem no tempo de Chrono Trigger no Super Nintendo.",
+  "jogos": [
+    {
+      "id": "chronotrigger",
+      "nome": "Chrono Trigger",
+      "rom": "ChronoTrigger.smc",
+      "capa": "images/colecoes/chronotrigger/chronotrigger.jpg"
+    }
+  ]
+}
