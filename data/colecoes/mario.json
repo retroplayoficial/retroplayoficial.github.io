@@ -27,6 +27,13 @@
     },
 
     {
+      "id": "smac",
+      "nome": "Super Mario All Start Collection PT-BR",
+      "rom": "SuperMarioAllStars.sfc",
+      "capa": "images/colecoes/mario/jogos/bannercardmarioallstart.jpg"
+    },
+
+    {
       "id": "yi",
       "nome": "Yoshi's Island",
       "rom": "yoshi-island.smc",
